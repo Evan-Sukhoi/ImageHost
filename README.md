@@ -1,2 +1,2 @@
 # ImageHost
-Personal image host for non-commercial use, like blogs or course project
+### Personal image host for non-commercial use, including typora, blogs and course project.
