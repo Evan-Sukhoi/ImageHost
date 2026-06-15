@@ -1,0 +1,191 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'/><meta name='viewport' content='width=device-width, initial-scale=1'/><title>视觉物料助手（Visual Materials Agent）</title><style>:root{--bg:#fff7ed;--panel:#ffffff;--text:#1f2937;--muted:#6b7280;--line:#fed7aa;--brand:#c2410c;--brand2:#f97316;--soft:#ffedd5;--soft2:#fff7ed;--soft-border:#fdba74;--accent-bg:#fff1f2;--accent-border:#fecdd3;--shadow:0 18px 48px rgba(15,23,42,.10)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Microsoft YaHei",sans-serif}.topbar{position:sticky;top:0;z-index:50;height:64px;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--brand)}.brand-mark{width:46px;height:46px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}.brand-mark svg{width:46px;height:46px;display:block}.btn{border:1px solid var(--soft-border);background:var(--soft);color:var(--brand);border-radius:12px;padding:9px 13px;font-weight:700;cursor:pointer}.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:24px;max-width:1480px;margin:24px auto;padding:0 24px}.sidebar{position:sticky;top:88px;height:calc(100vh - 112px);overflow:auto;background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow)}.sidebar h3{margin:4px 0 14px;color:var(--brand)}.search{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:12px}.nav{display:flex;flex-direction:column;gap:6px}.nav a{color:#334155;text-decoration:none;border-radius:12px;padding:9px 10px;font-size:14px}.nav a.sub{padding-left:24px;font-size:13px}.nav a:hover,.nav a.active{background:var(--soft);color:var(--brand);font-weight:800}.nav-group{margin:12px 0 4px;padding:8px 10px;color:var(--brand);font-weight:900;font-size:13px;border-top:1px solid var(--line)}.nav a.extension{padding-left:18px;color:#475569}.extension-intro{background:linear-gradient(135deg,var(--accent-bg),#fff);border:1px solid var(--accent-border);border-radius:24px;box-shadow:var(--shadow);padding:26px 32px;margin-bottom:24px}.extension-intro h2{margin:8px 0 8px;color:var(--brand);font-size:28px}.extension-intro p{margin:0;color:var(--muted);line-height:1.75}.side-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.side-actions button,.visual-toolbar button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px;cursor:pointer}.hero-card,.content-section,.visual-section{background:var(--panel);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:24px}.cover-wrap{height:560px;background:var(--soft2);overflow:hidden}.cover-wrap svg{width:100%;height:100%;display:block}.hero-body{padding:30px 34px}.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);font-weight:800}.hero-title{font-size:40px;line-height:1.15;margin:10px 0}.hero-subtitle{font-size:18px;color:#344054;line-height:1.65}.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.pill{background:var(--soft);border:1px solid var(--soft-border);color:var(--brand);border-radius:999px;padding:7px 11px;font-size:13px;font-weight:700}.content-section{padding:28px 32px}.content-section.level-2{margin-left:28px;border-left:6px solid var(--soft-border)}.content-section.collapsed .section-body{display:none}.extension-zone{background:var(--accent-bg);border-color:var(--accent-border)}.section-kicker{font-size:12px;font-weight:900;color:var(--brand);letter-spacing:.08em}.step{display:inline-block;background:var(--soft);border:1px solid var(--soft-border);border-radius:999px;padding:2px 7px;margin-right:6px}.section-head{display:flex;justify-content:space-between;align-items:center}.section-head h2{font-size:28px;margin:0;color:var(--brand)}.section-toggle{border:1px solid var(--line);background:#fff;border-radius:10px;padding:7px 10px;cursor:pointer}.logic-note{background:#f8fafc;border-left:4px solid var(--brand2);border-radius:12px;padding:10px 12px;color:#475467}.section-summary{font-size:16px;color:#475467;line-height:1.75}.kv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:18px 0}.kv{display:grid;grid-template-columns:110px 1fr;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:54px}.kv span{background:var(--soft2);color:var(--brand);font-weight:800;padding:14px}.kv strong{padding:14px}.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:18px 0}.info-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:18px}.card-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}.info-card h3{margin:0 0 8px;font-size:19px}.mini-badge{background:var(--soft);border:1px solid var(--soft-border);color:var(--brand);border-radius:999px;padding:3px 8px;font-size:12px;font-weight:800}.clean-list{padding-left:20px}.clean-list li{margin:7px 0;line-height:1.65}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px}table{width:100%;border-collapse:collapse;background:#fff}th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}th{background:var(--soft2);color:var(--brand);font-weight:900}.subsection{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin:14px 0;background:#fbfdff}.subsection summary{cursor:pointer;font-weight:900}.visual-section{padding:24px}.visual-toolbar{display:flex;justify-content:space-between;align-items:center}.visual-toolbar h2{margin:0;color:var(--brand)}.svg-viewer{height:560px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden;position:relative;cursor:grab;margin-top:16px}.svg-canvas{transform-origin:center center;position:absolute;left:0;top:0;width:100%;height:100%;padding:24px;display:flex;align-items:center;justify-content:center}.svg-canvas svg{width:100%;max-width:1180px;max-height:100%;height:auto;display:block}.hint,.note{font-size:14px;color:var(--muted)}.toast{position:fixed;right:24px;bottom:24px;background:#0f172a;color:#fff;padding:12px 16px;border-radius:14px;opacity:0;transform:translateY(12px);transition:.2s;z-index:80}.toast.show{opacity:1;transform:translateY(0)}@media(max-width:980px){.layout{grid-template-columns:1fr}.sidebar{position:relative;top:0;height:auto}.hero-title{font-size:30px}.content-section{padding:22px}.content-section.level-2{margin-left:0}.svg-viewer{height:420px}}</style></head><body><svg width='0' height='0' style='position:absolute'><defs><linearGradient id='brandLogoGrad' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='#4f46e5'/><stop offset='100%' stop-color='#06b6d4'/></linearGradient></defs></svg><header class='topbar'><div class='brand'><span class='brand-mark' aria-hidden='true'><svg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'><defs><linearGradient id='prdLogoG' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='var(--brand)'/><stop offset='100%' stop-color='var(--brand2)'/></linearGradient></defs><rect x='4' y='4' width='56' height='56' rx='18' fill='url(#prdLogoG)'/><text x='32' y='39' text-anchor='middle' font-family='Arial,Microsoft YaHei,sans-serif' font-size='18' font-weight='900' fill='white' letter-spacing='1'>PRD</text></svg></span><span>视觉物料助手（Visual Materials Agent）</span></div><div><button class='btn' id='downloadHtml' type='button'>下载 HTML</button> <button class='btn' id='printBtn' type='button'>打印 / PDF</button></div></header><div class='layout'><aside class='sidebar'><h3>PRD 导航</h3><input class='search' id='docSearch' placeholder='搜索模块 / 关键词'/><div class='side-actions'><button id='expandAll' type='button'>展开</button><button id='collapseAll' type='button'>折叠</button></div><nav class='nav'><a class='' href='#architecture'>一、交互式框架图</a><a class='' href='#overview'>二、项目背景与目标</a><a class='' href='#users'>三、目标用户</a><a class='' href='#functionality'>四、核心功能</a><a class='' href='#user-flow'>五、用户流程</a><a class='' href='#non-functional'>六、非功能需求</a><a class='' href='#dependencies'>七、前置依赖与已完成工作</a><a class='' href='#out-of-scope'>八、暂不包含的功能</a><a class='' href='#tech-direction'>九、技术方向</a><a class='' href='#milestones'>十、里程碑</a><a class='' href='#naming-convention'>十一、物料命名规范</a></nav></aside><main class='main'><section class='hero-card'><div class='cover-wrap'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 640" width="1440" height="640">
+  <defs>
+    <!-- 温暖橙红渐变背景 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F12711"/>
+      <stop offset="50%" stop-color="#F55A2A"/>
+      <stop offset="100%" stop-color="#F5AF19"/>
+    </linearGradient>
+    
+    <!-- 流体线条渐变 -->
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- 矩形渐变 - 白色半透明 -->
+    <linearGradient id="rectGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="rectGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="rectGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="rectGrad4" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="rectGrad5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFB75E" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1440" height="640" fill="url(#bgGrad)"/>
+
+  <!-- 右侧装饰图形：多尺寸排版矩阵 -->
+  <g id="visual-grid">
+    <!-- 大尺寸矩形 -->
+    <rect x="850" y="120" width="240" height="160" rx="12" fill="url(#rectGrad1)"/>
+    <rect x="1140" y="100" width="180" height="220" rx="12" fill="url(#rectGrad2)"/>
+    <rect x="820" y="340" width="200" height="240" rx="12" fill="url(#rectGrad3)"/>
+    <rect x="1080" y="380" width="260" height="180" rx="12" fill="url(#rectGrad4)"/>
+    <rect x="950" y="20" width="80" height="80" rx="8" fill="url(#rectGrad5)"/>
+
+    <!-- 内部多尺寸排版元素 -->
+    <!-- 矩形 1 内部 -->
+    <rect x="880" y="150" width="60" height="60" rx="4" fill="#FFFFFF" fill-opacity="0.1"/>
+    <line x1="880" y1="230" x2="1020" y2="230" stroke="#FFFFFF" stroke-width="6" stroke-opacity="0.3"/>
+    <line x1="880" y1="250" x2="980" y2="250" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.2"/>
+    
+    <!-- 矩形 2 内部 -->
+    <rect x="1160" y="120" width="40" height="40" rx="4" fill="#FFFFFF" fill-opacity="0.15"/>
+    <rect x="1220" y="120" width="80" height="60" rx="4" fill="#FFFFFF" fill-opacity="0.1"/>
+    <rect x="1160" y="180" width="140" height="80" rx="4" fill="#FFFFFF" fill-opacity="0.15"/>
+    <line x1="1160" y1="280" x2="1280" y2="280" stroke="#FFFFFF" stroke-width="4" stroke-opacity="0.25"/>
+    <line x1="1160" y1="295" x2="1240" y2="295" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.15"/>
+
+    <!-- 矩形 3 内部 -->
+    <rect x="850" y="380" width="70" height="70" rx="4" fill="#FFFFFF" fill-opacity="0.15"/>
+    <rect x="940" y="380" width="50" height="120" rx="4" fill="#FFFFFF" fill-opacity="0.1"/>
+    <line x1="850" y1="480" x2="960" y2="480" stroke="#FFFFFF" stroke-width="5" stroke-opacity="0.3"/>
+    <line x1="850" y1="500" x2="940" y2="500" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.2"/>
+    <line x1="850" y1="520" x2="1000" y2="520" stroke="#FFFFFF" stroke-width="8" stroke-opacity="0.4"/>
+
+    <!-- 矩形 4 内部 -->
+    <rect x="1100" y="420" width="60" height="100" rx="4" fill="#FFFFFF" fill-opacity="0.1"/>
+    <rect x="1180" y="420" width="140" height="60" rx="4" fill="#FFFFFF" fill-opacity="0.15"/>
+    <line x1="1100" y1="540" x2="1300" y2="540" stroke="#FFFFFF" stroke-width="6" stroke-opacity="0.25"/>
+
+    <!-- 多语言排版微元素 -->
+    <text x="890" y="175" font-family="sans-serif" font-size="12" fill="#FFFFFF" opacity="0.5">视觉</text>
+    <text x="1165" y="145" font-family="sans-serif" font-size="10" fill="#FFFFFF" opacity="0.6">EN</text>
+    <text x="1225" y="145" font-family="serif" font-size="10" fill="#FFFFFF" opacity="0.6">中文</text>
+    <text x="1165" y="205" font-family="sans-serif" font-size="12" fill="#FFFFFF" opacity="0.5">Agent</text>
+    <text x="1165" y="225" font-family="serif" font-size="8" fill="#FFFFFF" opacity="0.4">Materials</text>
+    <text x="860" y="430" font-family="sans-serif" font-size="14" fill="#FFFFFF" opacity="0.4">AI</text>
+    <text x="950" y="430" font-family="serif" font-size="10" fill="#FFFFFF" opacity="0.5">多尺寸</text>
+    <text x="1110" y="460" font-family="sans-serif" font-size="10" fill="#FFFFFF" opacity="0.6">Visual</text>
+    <text x="1190" y="440" font-family="serif" font-size="12" fill="#FFFFFF" opacity="0.5">自动化</text>
+  </g>
+
+  <!-- 流动线条与节点（AI驱动 / 数据流） -->
+  <g id="flow-lines">
+    <!-- 路径 1 -->
+    <path d="M 850 160 C 950, 40 1100, 220 1150, 100" fill="none" stroke="url(#flowGrad)" stroke-width="4" stroke-linecap="round"/>
+    <!-- 路径 2 -->
+    <path d="M 820 400 C 1000, 480 1200, 320 1350, 420" fill="none" stroke="url(#flowGrad)" stroke-width="3" stroke-linecap="round"/>
+    <!-- 路径 3 -->
+    <path d="M 1180 280 C 1120, 340 1280, 200 1400, 300" fill="none" stroke="url(#flowGrad)" stroke-width="5" stroke-linecap="round"/>
+    <!-- 路径 4 -->
+    <path d="M 950 40 C 900, 200 750, 300 820, 400" fill="none" stroke="url(#flowGrad)" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 4"/>
+
+    <!-- AI 数据节点 -->
+    <circle cx="950" cy="40" r="5" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="1100" cy="260" r="7" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="1250" cy="380" r="5" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="1400" cy="300" r="6" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="850" cy="200" r="4" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="770" cy="320" r="4" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="990" cy="160" r="3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="1320" cy="260" r="3" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+
+  <!-- 左侧信息区域：标题、副标题、标签 -->
+  <g id="text-content" font-family="'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+    <!-- 标题装饰线 -->
+    <line x1="120" y1="230" x2="280" y2="230" stroke="#FFFFFF" stroke-width="6" opacity="0.9" stroke-linecap="round"/>
+
+    <!-- 主标题 -->
+    <text x="120" y="280" font-size="56" font-weight="900" fill="#FFFFFF" letter-spacing="2">视觉物料助手</text>
+    <text x="120" y="340" font-size="36" font-weight="600" fill="#FFFFFF" opacity="0.95" letter-spacing="1">（Visual Materials Agent）</text>
+
+    <!-- 副标题 -->
+    <text x="120" y="400" font-size="22" font-weight="400" fill="#FFFFFF" opacity="0.9" letter-spacing="1">AI驱动多语种、多尺寸视觉物料自动化生成平台</text>
+
+    <!-- 标签区 -->
+    <g id="tags" font-size="14" font-weight="500" fill="#FFFFFF">
+      <!-- 第一行标签 -->
+      <g transform="translate(120, 430)">
+        <rect x="0" y="0" width="80" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.2"/>
+        <text x="40" y="21" text-anchor="middle">视觉物料</text>
+      </g>
+      <g transform="translate(215, 430)">
+        <rect x="0" y="0" width="100" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.2"/>
+        <text x="50" y="21" text-anchor="middle">多语言排版</text>
+      </g>
+      <g transform="translate(330, 430)">
+        <rect x="0" y="0" width="70" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.2"/>
+        <text x="35" y="21" text-anchor="middle">AI生成</text>
+      </g>
+      <g transform="translate(415, 430)">
+        <rect x="0" y="0" width="80" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.2"/>
+        <text x="40" y="21" text-anchor="middle">广告素材</text>
+      </g>
+
+      <!-- 第二行标签 -->
+      <g transform="translate(120, 475)">
+        <rect x="0" y="0" width="80" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.2"/>
+        <text x="40" y="21" text-anchor="middle">PSD解析</text>
+      </g>
+      <g transform="translate(215, 475)">
+        <rect x="0" y="0" width="80" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.2"/>
+        <text x="40" y="21" text-anchor="middle">批量延展</text>
+      </g>
+      <g transform="translate(310, 475)">
+        <rect x="0" y="0" width="80" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.2"/>
+        <text x="40" y="21" text-anchor="middle">文案校对</text>
+      </g>
+      <g transform="translate(405, 475)">
+        <rect x="0" y="0" width="80" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.2"/>
+        <text x="40" y="21" text-anchor="middle">渠道适配</text>
+      </g>
+    </g>
+  </g>
+</svg></div><div class='hero-body'><div class='eyebrow'>Product Requirement Document</div><h1 class='hero-title'>视觉物料助手（Visual Materials Agent）</h1><p class='hero-subtitle'>AI驱动多语种、多尺寸视觉物料自动化生成平台</p><div class='pill-row'><span class='pill'>视觉物料</span><span class='pill'>多语言排版</span><span class='pill'>AI生成</span><span class='pill'>广告素材</span><span class='pill'>PSD解析</span><span class='pill'>批量延展</span><span class='pill'>文案校对</span><span class='pill'>渠道适配</span></div><div class='kv-grid'><div class='kv'><span>版本</span><strong>v1.2</strong></div><div class='kv'><span>目标上线</span><strong>615前</strong></div></div></div></section><section class='visual-section' id='architecture'><div class='visual-toolbar'><h2>交互式框架图</h2><div><button data-zoom='in' type='button'>放大</button><button data-zoom='out' type='button'>缩小</button><button data-zoom='reset' type='button'>重置</button></div></div><div class='svg-viewer'><div class='svg-canvas'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 560">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="450" y="80" width="140" height="40" rx="4" ry="4" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="520" y="105" text-anchor="middle" dominant-baseline="middle" font-size="14" font-family="sans-serif" fill="#000">物料输入配置</text>
+  <rect x="450" y="180" width="140" height="40" rx="4" ry="4" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="520" y="205" text-anchor="middle" dominant-baseline="middle" font-size="14" font-family="sans-serif" fill="#000">多语种排版生成</text>
+  <rect x="450" y="280" width="140" height="40" rx="4" ry="4" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="520" y="305" text-anchor="middle" dominant-baseline="middle" font-size="14" font-family="sans-serif" fill="#000">多尺寸批量延展</text>
+  <rect x="450" y="380" width="140" height="40" rx="4" ry="4" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="520" y="405" text-anchor="middle" dominant-baseline="middle" font-size="14" font-family="sans-serif" fill="#000">文案校对Agent</text>
+  <rect x="450" y="480" width="140" height="40" rx="4" ry="4" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="520" y="505" text-anchor="middle" dominant-baseline="middle" font-size="14" font-family="sans-serif" fill="#000">批次管理与输出</text>
+  <rect x="80" y="230" width="140" height="40" rx="4" ry="4" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="150" y="255" text-anchor="middle" dominant-baseline="middle" font-size="14" font-family="sans-serif" fill="#000">规范与资源管理</text>
+  <line x1="520" y1="120" x2="520" y2="178" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="155" text-anchor="start" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#555">触发生成</text>
+  <line x1="520" y1="220" x2="520" y2="278" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="255" text-anchor="start" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#555">生成基础图</text>
+  <line x1="520" y1="320" x2="520" y2="378" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="355" text-anchor="start" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#555">自动校对</text>
+  <line x1="520" y1="420" x2="520" y2="478" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="455" text-anchor="start" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#555">质检通过</text>
+  <line x1="220" y1="250" x2="448" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="330" y="225" text-anchor="middle" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#555">字体与规则</text>
+  <line x1="220" y1="250" x2="448" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="330" y="275" text-anchor="middle" dominant-baseline="middle" font-size="12" font-family="sans-serif" fill="#555">尺寸规范</text>
+</svg></div></div><p class='hint'>支持滚轮缩放、鼠标拖拽平移。</p></section><section class='content-section level-1' id='overview' data-title='项目背景与目标'><div class='section-kicker'><span class='step'>P.1</span> 背景</div><div class='section-head'><h2>项目背景与目标</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：项目起点，定义问题与目标，为后续所有模块提供上下文。</p><p class='section-summary'>品牌营销需为多语言市场同步输出跨渠道视觉物料，当前依赖手动排版，面临多尺寸重复劳动、多语言版式错位、文案校对低效等痛点。本项目旨在构建AI驱动助手，实现多尺寸批量输出、多语种自动排版及文案校对，目标一次性通过率&gt;90%。</p><div class='kv-grid'><div class='kv'><span>一次性通过率</span><strong>&gt;90%</strong></div></div><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>核心痛点</h3><span class='mini-badge'>P0</span></div><p>当前流程中的主要瓶颈</p><ul class='clean-list'><li>排版耗时：线上下物料反复调整布局</li><li>多语言适配：文案替换导致版式错位</li><li>文案校对：图片文案依赖人工</li><li>多尺寸适配：单图需适配16+尺寸</li></ul></article><article class='info-card'><div class='card-title-row'><h3>项目目标</h3><span class='mini-badge'>P0</span></div><p>期望达成的核心能力</p><ul class='clean-list'><li>多尺寸批量输出（广告、社媒、官网等）</li><li>多语种自动排版与自适应</li><li>多语言文案校对Agent</li><li>规范内置与资源管理</li></ul></article></div></div></section><section class='content-section level-1' id='users' data-title='目标用户'><div class='section-kicker'><span class='step'>P.2</span> 用户</div><div class='section-head'><h2>目标用户</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：在明确项目背景和目标后，定义核心用户角色与职责，指导功能设计。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>平台服务两类核心角色</h3><span class='mini-badge'></span></div><p></p><ul class='clean-list'><li>负责活动策划与文案输入的用户运营，以及负责设计审核与创意把控的品牌视觉人员。</li></ul></article></div><div class='table-card'><h3>用户角色</h3><div class='table-wrap'><table><thead><tr><th>角色</th><th>描述</th></tr></thead><tbody><tr><td>用户运营</td><td>活动策划，提供文案与诉求，需快速获取多语种物料</td></tr><tr><td>品牌视觉</td><td>物料设计与审核，需减少重复排版，聚焦创意</td></tr></tbody></table></div></div></div></section><section class='content-section level-1' id='functionality' data-title='核心功能'><div class='section-kicker'><span class='step'>P.3</span> 功能</div><div class='section-head'><h2>核心功能</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：基于用户角色，展开核心功能设计，构成系统主干。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>系统提供五大核心能力</h3><span class='mini-badge'></span></div><p></p><ul class='clean-list'><li>多语种排版生成作为基础生成引擎</li><li>多尺寸批量延展覆盖7大渠道共40+尺寸</li><li>规范与资源管理内置品牌素材与字体</li><li>批次管理支持组织化输出与规范命名</li><li>文案校对Agent自动检测拼写/语法/语义问题。</li></ul></article></div><details class='subsection' open><summary>F1：多语种物料排版生成（P1）</summary><p>解析需求表格与PSD底图，自动合成各语言物料，支持自适应排版。</p><ul class='clean-list'><li>输入：需求xlsx、底图PSD、元素切图PSD</li><li>支持语言：DE/FR/NL/EN，可扩展</li><li>处理逻辑：解析文案→读取Artboard坐标→合成底图与元素→渲染文案→自适应（缩字号→缩行距→告警）</li><li>输出：按语言分组的合成终稿</li></ul></details><details class='subsection' open><summary>F2：多尺寸批量延展（P0）</summary><p>基于生成物料，一键输出七大渠道标准尺寸，覆盖付费广告、社交媒体、论坛、领英、YouTube、PR及官网PC/移动端。</p></details><details class='subsection' open><summary>F3：规范与资源管理（P1）</summary><p>内置渠道尺寸规范、品牌素材库权限、多语言字体统一管理，减少设计师手动查阅。</p><ul class='clean-list'><li>内置各渠道尺寸规范，无需手动查阅</li><li>品牌素材库（字体、Logo、色板）访问权限管理</li><li>多语言字体资源（Ageo TTF，西欧字符集）</li></ul></details><details class='subsection' open><summary>F4：批次管理与输出（P1）</summary><p>支持按批次组织物料，自动按渠道-语言-尺寸规范命名，并提供打包下载。</p><ul class='clean-list'><li>支持批次组织（如奥地利14批）</li><li>输出文件命名规范：[渠道]_[产品]_[批次]_[宽]x[高]px_[语言].jpg</li><li>支持整批次打包下载</li></ul></details><details class='subsection' open><summary>F5：多语言文案校对Agent（P2）</summary><p>自动检测生成物料中图片文案的拼写、语法、语义错误，输出校对报告。</p><ul class='clean-list'><li>检测项：拼写错误、语法错误、语义错误</li><li>覆盖语言：DE/FR/NL/EN</li><li>输出校对报告，标注问题位置与建议</li><li>触发方式：文案替换后自动触发，也支持手动对单张发起校对</li></ul></details></div></section><section class='content-section level-1' id='user-flow' data-title='用户流程'><div class='section-kicker'><span class='step'>P.4</span> 流程</div><div class='section-head'><h2>用户流程</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：在核心功能定义之后，描述用户端到端的操作流程，串联各模块。</p><p class='section-summary'>用户上传需求表格、底图PSD和元素切图，选择目标渠道后，系统自动解析、合成、排版、校对，并以渠道/语言/尺寸分组预览，最终支持单张调整与批量下载。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>输入与配置</h3><span class='mini-badge'></span></div><p>上传物料与选择渠道</p><ul class='clean-list'><li>上传需求xlsx（各语言文案+尺寸+要求）</li><li>上传底图PSD（含艺术板，无文字层）</li><li>上传元素切图PSD</li><li>选择目标渠道（可多选）</li></ul></article><article class='info-card'><div class='card-title-row'><h3>系统自动处理</h3><span class='mini-badge'></span></div><p>解析、合成、排版、校对</p><ul class='clean-list'><li>解析xlsx提取文案</li><li>读取PSD艺术板坐标</li><li>合成底图与元素</li><li>自适应排版并渲染文案</li><li>合规检测（溢出、安全区、分辨率）</li><li>多语言文案校对（P2阶段）</li></ul></article><article class='info-card'><div class='card-title-row'><h3>预览与审核</h3><span class='mini-badge'></span></div><p>分组预览与调整</p><ul class='clean-list'><li>按语言/渠道/尺寸分组预览</li><li>查看校对报告与问题标注</li><li>支持单张调整后重新生成</li></ul></article><article class='info-card'><div class='card-title-row'><h3>导出</h3><span class='mini-badge'></span></div><p>批量命名打包</p><ul class='clean-list'><li>按规范命名，打包下载整批次物料</li></ul></article></div></div></section><section class='content-section level-1' id='non-functional' data-title='非功能需求'><div class='section-kicker'><span class='step'>P.5</span> 非功能</div><div class='section-head'><h2>非功能需求</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：在流程之后，定义系统必须满足的质量属性与约束条件。</p><p class='section-summary'>系统需满足性能、质量、准确性、可用性和扩展性等方面的关键指标。</p><div class='table-card'><h3>非功能需求</h3><div class='table-wrap'><table><thead><tr><th>类别</th><th>要求</th></tr></thead><tbody><tr><td>性能</td><td>单批次（6语言×14尺寸=84张）生成时间 &lt; 5分钟</td></tr><tr><td>质量</td><td>输出分辨率满足各渠道最低要求，无压缩失真</td></tr><tr><td>准确性</td><td>文案无截断、无溢出、无乱码，字体渲染正确</td></tr><tr><td>可用性</td><td>设计师无需编程背景，操作步骤 ≤ 5 步完成一批次</td></tr><tr><td>扩展性</td><td>新增语言/渠道/尺寸可通过配置文件更新，无需改代码</td></tr></tbody></table></div></div></div></section><section class='content-section level-1' id='dependencies' data-title='前置依赖与已完成工作'><div class='section-kicker'><span class='step'>P.6</span> 依赖</div><div class='section-head'><h2>前置依赖与已完成工作</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：列出项目启动前已完成的前置工作，为开发提供输入基线。</p><p class='section-summary'>项目启动前已完成的资源与规范准备工作，包括设计思路、尺寸清单、字体、历史PSD文件等。</p><div class='table-card'><h3>依赖项及状态</h3><div class='table-wrap'><table><thead><tr><th>依赖项</th><th>状态</th></tr></thead><tbody><tr><td>视觉物料排版思路 &amp; 要求</td><td>✅ Done</td></tr><tr><td>物料适配尺寸清单</td><td>✅ Done</td></tr><tr><td>设计规范范围、品牌素材访问权限</td><td>✅ Done</td></tr><tr><td>多语言字体资源（Ageo TTF）</td><td>✅ Done</td></tr><tr><td>官网素材样图和标准</td><td>✅ Done（PC &amp; MB样图）</td></tr><tr><td>历史批次完整PSD文件（含16个Artboard）</td><td>✅ Done（6个地区）</td></tr><tr><td>需求表格格式（xlsx）</td><td>✅ Done（黑五/网一需求表为参考）</td></tr><tr><td>元素切图格式</td><td>✅ Done（PSD格式）</td></tr><tr><td>生图模型</td><td>✅ 已确认不引入主流程，M4按需评估</td></tr></tbody></table></div></div></div></section><section class='content-section level-1' id='out-of-scope' data-title='暂不包含的功能'><div class='section-kicker'><span class='step'>P.7</span> 范围外</div><div class='section-head'><h2>暂不包含的功能</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：基于已完成工作和本期目标，明确不包含的功能范围，管理预期。</p><p class='section-summary'>本期不包含视频物料生成、官网页面排版自动化、自动发布与A/B测试分析，后续版本规划。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>Out of Scope</h3><span class='mini-badge'></span></div><p>暂不实现的能力</p><ul class='clean-list'><li>视频物料生成（P1后规划）</li><li>官网页面排版自动化（M3排期）</li><li>自动发布到广告平台</li><li>A/B测试物料效果分析</li></ul></article></div></div></section><section class='content-section level-1' id='tech-direction' data-title='技术方向'><div class='section-kicker'><span class='step'>P.8</span> 技术</div><div class='section-head'><h2>技术方向</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：在明确范围后，阐述技术选型，为开发实现提供方向。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>关键技术</h3><span class='mini-badge'></span></div><p>技术选型</p><ul class='clean-list'><li>输入解析：xlsx直接解析，psd-tools读取Artboard坐标</li><li>图层合成：底图+元素叠加，Pillow渲染文字</li><li>排版规则：从历史PSD提取坐标，跨语言高度一致</li><li>字体管理：Ageo TTF，按字重加载，支持西欧字符集</li><li>输出格式：JPG，分辨率按渠道规范</li></ul></article><article class='info-card'><div class='card-title-row'><h3>采用Python生态</h3><span class='mini-badge'></span></div><p></p><ul class='clean-list'><li>psd-tools解析PSD，Pillow渲染文案，按历史PSD提取坐标规则，内置Ageo字体，输出JPG格式。</li></ul></article></div></div></section><section class='content-section level-1' id='milestones' data-title='里程碑'><div class='section-kicker'><span class='step'>P.9</span> 里程碑</div><div class='section-head'><h2>里程碑</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：基于技术可行性，制定分阶段交付计划。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>分四个阶段交付</h3><span class='mini-badge'></span></div><p></p><ul class='clean-list'><li>M1（615前）完成广告渠道多尺寸生成与多语种排版</li><li>M2接入社媒/论坛/领英/YouTube</li><li>M3接入官网与校对</li><li>M4可选生图模型接入。</li></ul></article></div><div class='table-card'><h3>里程碑计划</h3><div class='table-wrap'><table><thead><tr><th>阶段</th><th>内容</th><th>目标时间</th></tr></thead><tbody><tr><td>M1（615前）</td><td>P0广告渠道多尺寸批量生成（FB/GG/联盟，14种尺寸）；P1多语种文案替换+自适应排版</td><td>615前</td></tr><tr><td>M2（615后）</td><td>社媒、论坛、领英、YouTube渠道接入</td><td>615后</td></tr><tr><td>M3（TBD）</td><td>官网渠道接入（PC/MB双套尺寸）；P2多语言文案校对Agent</td><td>TBD</td></tr><tr><td>M4（P1后）</td><td>生图模型接入（可选，用于背景扩展/视频物料生成）</td><td>P1后</td></tr></tbody></table></div></div></div></section><section class='content-section level-1' id='naming-convention' data-title='物料命名规范'><div class='section-kicker'><span class='step'>P.10</span> 附录</div><div class='section-head'><h2>物料命名规范</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：附录：规范命名规则，作为输出阶段的指导标准。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>命名规范</h3><span class='mini-badge'></span></div><p>统一命名格式</p><ul class='clean-list'><li>格式：[渠道]_[产品]_[批次]_[宽]x[高]px_[语言].jpg</li><li>示例：fb_SF4000_KV14_1080x1350px_DE.jpg</li><li>当前样图命名差异需统一</li></ul></article><article class='info-card'><div class='card-title-row'><h3>建议统一命名格式</h3><span class='mini-badge'></span></div><p></p><ul class='clean-list'><li>[渠道]_[产品]_[批次]_[宽]x[高]px_[语言].jpg。</li></ul></article><article class='info-card'><div class='card-title-row'><h3>示例</h3><span class='mini-badge'></span></div><p></p><ul class='clean-list'><li>fb_SF4000_KV14_1080x1350px_DE.jpg。当前样图命名不一致，需统一。</li></ul></article></div></div></section><p class='note'>本页面由 Dify Workflow 生成；点击“下载 HTML”即可保存为本地页面。</p></main></div><div class='toast'></div><script>(function(){const qs=(x,r=document)=>r.querySelector(x),qsa=(x,r=document)=>Array.from(r.querySelectorAll(x));const sections=qsa('.content-section'),navLinks=qsa('.nav a'),toastEl=qs('.toast');function toast(m){if(!toastEl)return;toastEl.textContent=m;toastEl.classList.add('show');setTimeout(()=>toastEl.classList.remove('show'),1500)}const search=qs('#docSearch');if(search)search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();sections.forEach(sec=>{sec.style.display=sec.innerText.toLowerCase().includes(q)?'block':'none'})});qs('#expandAll')?.addEventListener('click',()=>{qsa('details').forEach(d=>d.open=true);sections.forEach(sec=>sec.classList.remove('collapsed'));qsa('.section-toggle').forEach(b=>b.textContent='收起');toast('已展开')});qs('#collapseAll')?.addEventListener('click',()=>{qsa('details').forEach(d=>d.open=false);sections.forEach(sec=>sec.classList.add('collapsed'));qsa('.section-toggle').forEach(b=>b.textContent='展开');toast('已折叠')});qsa('.section-toggle').forEach(btn=>btn.addEventListener('click',()=>{const sec=btn.closest('.content-section');if(!sec)return;sec.classList.toggle('collapsed');btn.textContent=sec.classList.contains('collapsed')?'展开':'收起';}));qsa('.visual-section').forEach(section=>{let scale=1,tx=0,ty=0,drag=false,sx=0,sy=0;const viewer=qs('.svg-viewer',section),canvas=qs('.svg-canvas',section);if(!viewer||!canvas)return;const apply=()=>canvas.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;const zoom=d=>{scale=Math.max(.25,Math.min(4,scale+d));apply()};viewer.addEventListener('wheel',e=>{e.preventDefault();zoom(e.deltaY<0?.12:-.12)},{passive:false});viewer.addEventListener('pointerdown',e=>{drag=true;sx=e.clientX-tx;sy=e.clientY-ty;viewer.setPointerCapture(e.pointerId)});viewer.addEventListener('pointermove',e=>{if(!drag)return;tx=e.clientX-sx;ty=e.clientY-sy;apply()});viewer.addEventListener('pointerup',()=>drag=false);qs('[data-zoom="in"]',section)?.addEventListener('click',()=>zoom(.18));qs('[data-zoom="out"]',section)?.addEventListener('click',()=>zoom(-.18));qs('[data-zoom="reset"]',section)?.addEventListener('click',()=>{scale=1;tx=0;ty=0;apply()});apply();});function download(name,mime,content){const blob=new Blob([content],{type:mime});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}qs('#downloadHtml')?.addEventListener('click',()=>download('prd-richtext.html','text/html;charset=utf-8',document.documentElement.outerHTML));qs('#printBtn')?.addEventListener('click',()=>window.print());})();</script></body></html>
