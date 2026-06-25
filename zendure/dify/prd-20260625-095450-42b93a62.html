@@ -1,0 +1,356 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'/><meta name='viewport' content='width=device-width, initial-scale=1'/><title>社群群组答疑助手（Community Q&amp;A Agent）</title><style>:root{--bg:#eef2ff;--panel:#ffffff;--text:#111827;--muted:#64748b;--line:#dbe4ff;--brand:#4f46e5;--brand2:#06b6d4;--soft:#eef2ff;--soft2:#f5f3ff;--soft-border:#c7d2fe;--accent-bg:#f0f9ff;--accent-border:#bae6fd;--shadow:0 18px 48px rgba(15,23,42,.10)}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Microsoft YaHei",sans-serif}.topbar{position:sticky;top:0;z-index:50;height:64px;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--brand)}.brand-mark{width:46px;height:46px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}.brand-mark svg{width:46px;height:46px;display:block}.btn{border:1px solid var(--soft-border);background:var(--soft);color:var(--brand);border-radius:12px;padding:9px 13px;font-weight:700;cursor:pointer}.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:24px;max-width:1480px;margin:24px auto;padding:0 24px}.sidebar{position:sticky;top:88px;height:calc(100vh - 112px);overflow:auto;background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow)}.sidebar h3{margin:4px 0 14px;color:var(--brand)}.search{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:12px}.search-tools{display:grid;grid-template-columns:1fr auto auto;gap:6px;align-items:center;margin:-4px 0 12px}.search-tools span{font-size:12px;color:var(--muted);background:var(--soft2);border:1px solid var(--line);border-radius:10px;padding:7px 8px;text-align:center}.search-tools button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:7px 8px;cursor:pointer;font-size:12px}.side-actions.single{grid-template-columns:1fr}mark.prd-search-hit{background:#fde68a;color:#111827;border-radius:4px;padding:0 2px}mark.prd-search-hit.active{background:#fb923c;color:#fff;box-shadow:0 0 0 2px rgba(251,146,60,.25)}.nav{display:flex;flex-direction:column;gap:6px}.nav a{color:#334155;text-decoration:none;border-radius:12px;padding:9px 10px;font-size:14px}.nav a.sub{padding-left:24px;font-size:13px}.nav a:hover,.nav a.active{background:var(--soft);color:var(--brand);font-weight:800}.nav-group{margin:12px 0 4px;padding:8px 10px;color:var(--brand);font-weight:900;font-size:13px;border-top:1px solid var(--line)}.nav a.extension{padding-left:18px;color:#475569}.extension-intro{background:linear-gradient(135deg,var(--accent-bg),#fff);border:1px solid var(--accent-border);border-radius:24px;box-shadow:var(--shadow);padding:26px 32px;margin-bottom:24px}.extension-intro h2{margin:8px 0 8px;color:var(--brand);font-size:28px}.extension-intro p{margin:0;color:var(--muted);line-height:1.75}.side-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.side-actions button,.visual-toolbar button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px;cursor:pointer}.content-section,.visual-section,.extension-intro{scroll-margin-top:92px}.hero-card,.content-section,.visual-section{background:var(--panel);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:24px}.cover-wrap{height:560px;background:var(--soft2);overflow:hidden}.cover-wrap svg{width:100%;height:100%;display:block}.hero-body{padding:30px 34px}.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);font-weight:800}.hero-title{font-size:40px;line-height:1.15;margin:10px 0}.hero-subtitle{font-size:18px;color:#344054;line-height:1.65}.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.pill{background:var(--soft);border:1px solid var(--soft-border);color:var(--brand);border-radius:999px;padding:7px 11px;font-size:13px;font-weight:700}.content-section{padding:28px 32px}.content-section.level-3{margin-left:54px;border-left:4px dashed var(--soft-border);background:linear-gradient(90deg,var(--soft2),var(--panel) 38%)}.nav a.sub2{padding-left:38px;font-size:12.5px;color:#64748b}.content-section.level-2{margin-left:28px;border-left:6px solid var(--soft-border)}.content-section.collapsed .section-body{display:none}.extension-zone{background:var(--accent-bg);border-color:var(--accent-border)}.section-kicker{font-size:12px;font-weight:900;color:var(--brand);letter-spacing:.08em}.step{display:inline-block;background:var(--soft);border:1px solid var(--soft-border);border-radius:999px;padding:2px 7px;margin-right:6px}.section-head{display:flex;justify-content:space-between;align-items:center}.section-head h2{font-size:28px;margin:0;color:var(--brand)}.section-toggle{border:1px solid var(--line);background:#fff;border-radius:10px;padding:7px 10px;cursor:pointer}.logic-note{background:#f8fafc;border-left:4px solid var(--brand2);border-radius:12px;padding:10px 12px;color:#475467}.section-summary{font-size:16px;color:#475467;line-height:1.75}.kv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:18px 0}.kv{display:grid;grid-template-columns:110px 1fr;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:54px}.kv span{background:var(--soft2);color:var(--brand);font-weight:800;padding:14px}.kv strong{padding:14px}.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:18px 0}.info-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:18px}.card-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}.info-card h3{margin:0 0 8px;font-size:19px}.mini-badge{background:var(--soft);border:1px solid var(--soft-border);color:var(--brand);border-radius:999px;padding:3px 8px;font-size:12px;font-weight:800}.clean-list{padding-left:20px}.clean-list li{margin:7px 0;line-height:1.65}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px}table{width:100%;border-collapse:collapse;background:#fff}th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}th{background:var(--soft2);color:var(--brand);font-weight:900}.subsection{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin:14px 0;background:#fbfdff}.subsection summary{cursor:pointer;font-weight:900}.visual-section{padding:24px}.visual-toolbar{display:flex;justify-content:space-between;align-items:center}.visual-toolbar h2{margin:0;color:var(--brand)}.svg-viewer{height:560px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden;position:relative;cursor:grab;margin-top:16px}.svg-canvas{transform-origin:center center;position:absolute;left:0;top:0;width:100%;height:100%;padding:24px;display:flex;align-items:center;justify-content:center}.svg-canvas svg{width:100%;max-width:1180px;max-height:100%;height:auto;display:block}.hint,.note{font-size:14px;color:var(--muted)}.toast{position:fixed;right:24px;bottom:24px;background:#0f172a;color:#fff;padding:12px 16px;border-radius:14px;opacity:0;transform:translateY(12px);transition:.2s;z-index:80}.toast.show{opacity:1;transform:translateY(0)}@media(max-width:980px){.layout{grid-template-columns:1fr}.sidebar{position:relative;top:0;height:auto}.hero-title{font-size:30px}.content-section{padding:22px}.content-section.level-2{margin-left:0}.svg-viewer{height:420px}}</style></head><body><svg width='0' height='0' style='position:absolute'><defs><linearGradient id='brandLogoGrad' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='#4f46e5'/><stop offset='100%' stop-color='#06b6d4'/></linearGradient></defs></svg><header class='topbar'><div class='brand'><span class='brand-mark' aria-hidden='true'><svg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'><defs><linearGradient id='prdLogoG' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='var(--brand)'/><stop offset='100%' stop-color='var(--brand2)'/></linearGradient></defs><rect x='4' y='4' width='56' height='56' rx='18' fill='url(#prdLogoG)'/><text x='32' y='39' text-anchor='middle' font-family='Arial,Microsoft YaHei,sans-serif' font-size='18' font-weight='900' fill='white' letter-spacing='1'>PRD</text></svg></span><span>社群群组答疑助手（Community Q&amp;A Agent）</span></div><div><button class='btn' id='downloadHtml' type='button'>下载 HTML</button> <button class='btn' id='printBtn' type='button'>打印 / PDF</button></div></header><div class='layout'><aside class='sidebar'><h3>PRD 导航</h3><input class='search' id='docSearch' placeholder='搜索模块 / 关键词'/><div class='search-tools'><span id='searchCounter'>0/0</span><button id='prevSearch' type='button'>上一个</button><button id='nextSearch' type='button'>下一个</button></div><div class='side-actions single'><button id='toggleAll' type='button'>全部折叠</button></div><nav class='nav'><a class='' href='#architecture'>一、交互式框架图</a><a class='' href='#background'>二、背景与目标</a><a class='' href='#success_metrics'>三、成功指标</a><a class='' href='#user_roles'>四、目标用户与角色</a><a class='' href='#core_pipeline'>五、核心生成流水线</a><a class='sub' href='#io_boundary'>5.1 输入输出与动作边界</a><a class='' href='#user_flow'>六、用户流程</a><a class='' href='#non_functional'>七、非功能需求</a><a class='' href='#pre_dependencies'>八、前置依赖与当前缺口</a><a class='' href='#tech_architecture'>九、技术选型与架构</a><a class='' href='#milestones'>十、里程碑与交付节奏</a><a class='' href='#risks'>十一、风险与应对</a><a class='' href='#scope_out'>十二、暂不包含的功能</a><div class='nav-group'>补充拓展</div><a class='extension' href='#extension-tech-selection'>补充一、技术选型建议</a><a class='extension' href='#extension-arch-optimization'>补充二、架构与数据流优化</a></nav></aside><main class='main'><section class='hero-card'><div class='cover-wrap'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 640" width="100%" height="100%">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="30%" stop-color="#1E1B4B"/>
+      <stop offset="70%" stop-color="#2E1065"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    
+    <!-- 光晕渐变 -->
+    <linearGradient id="glowL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#A78BFA" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- 柔光滤镜 -->
+    <filter id="blurL" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+
+    <!-- 飞书卡片渐变 -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- 网格图案 -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#A78BFA" stroke-width="0.5" opacity="0.08"/>
+    </pattern>
+    <pattern id="dotGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="#A78BFA" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1440" height="640" fill="url(#bgGlow)"/>
+  <rect width="1440" height="640" fill="url(#grid)"/>
+  <rect width="1440" height="640" fill="url(#dotGrid)"/>
+
+  <!-- 两侧柔光弧线 -->
+  <path d="M -50 640 Q 150 300 -50 0" fill="none" stroke="#6D28D9" stroke-width="80" opacity="0.25" filter="url(#blurL)"/>
+  <path d="M 1490 640 Q 1300 300 1490 0" fill="none" stroke="#1E3A8A" stroke-width="80" opacity="0.25" filter="url(#blurL)"/>
+
+  <!-- 数据流动线条 -->
+  <path d="M 150 640 L 300 540 L 450 550 L 600 450" fill="none" stroke="#C4B5FD" stroke-width="2" opacity="0.3"/>
+  <path d="M 900 200 L 1050 300 L 1200 250 L 1440 320" fill="none" stroke="#A78BFA" stroke-width="1.5" opacity="0.2" stroke-dasharray="6 4"/>
+
+  <!-- 漂浮的消息气泡 -->
+  <g opacity="0.8">
+    <!-- 气泡 1 -->
+    <g transform="translate(250, 100)">
+      <rect width="80" height="40" rx="20" fill="#FFFFFF" opacity="0.08"/>
+      <path d="M 10 40 L 20 55 L 30 40 Z" fill="#FFFFFF" opacity="0.08"/>
+    </g>
+    <!-- 气泡 2 -->
+    <g transform="translate(1200, 500)">
+      <rect width="70" height="35" rx="17.5" fill="#FFFFFF" opacity="0.06"/>
+      <path d="M 45 35 L 55 48 L 60 35 Z" fill="#FFFFFF" opacity="0.06"/>
+    </g>
+    <!-- 气泡 3 -->
+    <g transform="translate(1050, 80)">
+      <rect width="60" height="30" rx="15" fill="#FFFFFF" opacity="0.05"/>
+      <path d="M 15 30 L 5 42 L 20 30 Z" fill="#FFFFFF" opacity="0.05"/>
+    </g>
+    <!-- 气泡 4 -->
+    <g transform="translate(800, 580)">
+      <rect width="50" height="25" rx="12.5" fill="#FFFFFF" opacity="0.07"/>
+      <path d="M 30 25 L 40 35 L 45 25 Z" fill="#FFFFFF" opacity="0.07"/>
+    </g>
+  </g>
+
+  <!-- 中央AI助手光环与飞书卡片 -->
+  <g transform="translate(1100, 320)">
+    <!-- 外发光环 -->
+    <circle cx="0" cy="0" r="150" fill="url(#glowL)" filter="url(#blurL)"/>
+    <circle cx="0" cy="0" r="160" fill="none" stroke="#8B5CF6" stroke-width="1.5" opacity="0.3" stroke-dasharray="8 12"/>
+    
+    <!-- 核心光环轨道 -->
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#A78BFA" stroke-width="3" stroke-dasharray="15 15" opacity="0.8"/>
+    <circle cx="0" cy="0" r="105" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.6"/>
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#C4B5FD" stroke-width="2" opacity="0.9"/>
+    
+    <!-- 中心光点 -->
+    <circle cx="0" cy="0" r="6" fill="#FFFFFF"/>
+    <circle cx="0" cy="0" r="12" fill="#A78BFA" filter="url(#softGlow)"/>
+
+    <!-- 轨道数据节点 -->
+    <circle cx="80" cy="0" r="8" fill="#A78BFA"/>
+    <circle cx="0" cy="-80" r="8" fill="#8B5CF6"/>
+    <circle cx="-80" cy="0" r="8" fill="#7C3AED"/>
+    <circle cx="0" cy="80" r="8" fill="#8B5CF6"/>
+    
+    <!-- 连接线 -->
+    <path d="M 0 0 L 80 0" fill="none" stroke="#A78BFA" stroke-width="2"/>
+    <path d="M 0 0 L 0 -80" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+    <path d="M 0 0 L -80 0" fill="none" stroke="#7C3AED" stroke-width="2"/>
+    <path d="M 0 0 L 0 80" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+  </g>
+
+  <!-- 飞书卡片与解析/安抚粒子 -->
+  <g transform="translate(1045, 110)">
+    <!-- 卡片主体 -->
+    <rect width="110" height="70" rx="10" fill="url(#cardGrad)" stroke="#C4B5FD" stroke-width="1.5"/>
+    
+    <!-- 卡片头部装饰 -->
+    <rect x="15" y="12" width="80" height="5" rx="2.5" fill="#7C3AED" opacity="0.9"/>
+    
+    <!-- 飞书告警图标（绿色勾） -->
+    <path d="M 50 38 L 55 43 L 65 33" fill="none" stroke="#34D399" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- 卡片底部文字行 -->
+    <rect x="15" y="55" width="60" height="4" rx="2" fill="#FFFFFF" opacity="0.6"/>
+    <rect x="80" y="55" width="15" height="4" rx="2" fill="#FFFFFF" opacity="0.3"/>
+
+    <!-- 周围科技粒子 -->
+    <circle cx="-20" cy="-10" r="3" fill="#A78BFA" opacity="0.8"/>
+    <circle cx="-30" cy="20" r="2" fill="#C4B5FD" opacity="0.6"/>
+    <circle cx="-15" cy="40" r="4" fill="#8B5CF6" opacity="0.5"/>
+    <circle cx="120" cy="5" r="2.5" fill="#7C3AED" opacity="0.7"/>
+    <circle cx="130" cy="30" r="1.5" fill="#A78BFA" opacity="0.8"/>
+    <circle cx="115" cy="60" r="3" fill="#E9D5FF" opacity="0.4"/>
+    
+    <!-- 连接至光环的能量流 -->
+    <path d="M 55 70 Q 55 120 55 210" fill="none" stroke="#A78BFA" stroke-width="2" stroke-dasharray="6 6" opacity="0.7"/>
+    <path d="M 55 70 Q 80 140 100 210" fill="none" stroke="#C4B5FD" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- ================= 文字排版区域 ================= -->
+  
+  <!-- 标题组 -->
+  <!-- 主标题：社群群组答疑助手 -->
+  <text x="100" y="230" font-family="'PingFang SC', 'Microsoft YaHei', 'Source Han Sans CN', sans-serif" font-size="56" font-weight="900" fill="#FFFFFF" letter-spacing="3">社群群组答疑助手</text>
+  
+  <!-- 主标题英文部分：（Community Q&A Agent） -->
+  <text x="100" y="300" font-family="'PingFang SC', 'Microsoft YaHei', 'Source Han Sans CN', sans-serif" font-size="36" font-weight="700" fill="#C4B5FD" letter-spacing="1.5">（Community Q&amp;A Agent）</text>
+  
+  <!-- 副标题 -->
+  <text x="100" y="370" font-family="'PingFang SC', 'Microsoft YaHei', 'Source Han Sans CN', sans-serif" font-size="24" font-weight="400" fill="#A78BFA" letter-spacing="1">面向私域社群的AI群组答疑与售后工单告警助手</text>
+  
+  <!-- 标题下划线装饰 -->
+  <rect x="100" y="315" width="90" height="4" rx="2" fill="#A78BFA" opacity="0.8"/>
+
+  <!-- 标签组 -->
+  <g font-family="'PingFang SC', 'Microsoft YaHei', 'Source Han Sans CN', sans-serif" font-size="14" font-weight="500" fill="#E9D5FF">
+    <rect x="100" y="450" width="80" height="30" rx="15" fill="#FFFFFF" opacity="0.1" stroke="#A78BFA" stroke-width="0.5"/>
+    <text x="140" y="469" text-anchor="middle">AI Agent</text>
+    
+    <rect x="190" y="450" width="80" height="30" rx="15" fill="#FFFFFF" opacity="0.1" stroke="#A78BFA" stroke-width="0.5"/>
+    <text x="230" y="469" text-anchor="middle">社群运营</text>
+
+    <rect x="280" y="450" width="80" height="30" rx="15" fill="#FFFFFF" opacity="0.1" stroke="#A78BFA" stroke-width="0.5"/>
+    <text x="320" y="469" text-anchor="middle">VOC</text>
+
+    <rect x="370" y="450" width="80" height="30" rx="15" fill="#FFFFFF" opacity="0.1" stroke="#A78BFA" stroke-width="0.5"/>
+    <text x="410" y="469" text-anchor="middle">工单</text>
+
+    <rect x="460" y="450" width="80" height="30" rx="15" fill="#FFFFFF" opacity="0.1" stroke="#A78BFA" stroke-width="0.5"/>
+    <text x="500" y="469" text-anchor="middle">飞书告警</text>
+
+    <rect x="550" y="450" width="80" height="30" rx="15" fill="#FFFFFF" opacity="0.1" stroke="#A78BFA" stroke-width="0.5"/>
+    <text x="590" y="469" text-anchor="middle">意图识别</text>
+
+    <rect x="640" y="450" width="80" height="30" rx="15" fill="#FFFFFF" opacity="0.1" stroke="#A78BFA" stroke-width="0.5"/>
+    <text x="680" y="469" text-anchor="middle">售后</text>
+
+    <rect x="730" y="450" width="80" height="30" rx="15" fill="#FFFFFF" opacity="0.1" stroke="#A78BFA" stroke-width="0.5"/>
+    <text x="770" y="469" text-anchor="middle">私域</text>
+  </g>
+</svg></div><div class='hero-body'><div class='eyebrow'>Product Requirement Document</div><h1 class='hero-title'>社群群组答疑助手（Community Q&amp;A Agent）</h1><p class='hero-subtitle'>面向私域社群的AI群组答疑与售后工单告警助手</p><div class='pill-row'><span class='pill'>AI Agent</span><span class='pill'>社群运营</span><span class='pill'>VOC</span><span class='pill'>工单</span><span class='pill'>飞书告警</span><span class='pill'>意图识别</span><span class='pill'>售后</span><span class='pill'>私域</span></div><div class='kv-grid'><div class='kv'><span>版本</span><strong>v0.1</strong></div><div class='kv'><span>优先级</span><strong>P1</strong></div><div class='kv'><span>目标上线</span><strong>615前一期</strong></div></div></div></section><section class='visual-section' id='architecture'><div class='visual-toolbar'><h2>交互式框架图</h2><div><button data-zoom='in' type='button'>放大</button><button data-zoom='out' type='button'>缩小</button><button data-zoom='reset' type='button'>重置</button></div></div><div class='svg-viewer'><div class='svg-canvas'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+</marker>
+</defs>
+<rect width="1280" height="720" fill="#f4f7fa"/>
+<rect x="60" y="120" width="260" height="520" rx="12" fill="#dbeafe" stroke="#bfdbfe" stroke-width="2"/>
+<text x="190" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e40af">数据接入层</text>
+<rect x="380" y="120" width="260" height="520" rx="12" fill="#dcfce7" stroke="#bbf7d0" stroke-width="2"/>
+<text x="510" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#166534">智能决策层</text>
+<rect x="700" y="120" width="260" height="520" rx="12" fill="#ffedd5" stroke="#fed7aa" stroke-width="2"/>
+<text x="830" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#9a3412">动作执行层</text>
+<rect x="1020" y="120" width="260" height="520" rx="12" fill="#f3e8ff" stroke="#e9d5ff" stroke-width="2"/>
+<text x="1150" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6b21a8">运营治理层</text>
+<g>
+<rect x="80" y="330" width="220" height="100" rx="10" fill="#3b82f6"/>
+<text x="190" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">VOC消息接入</text>
+<text x="190" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e0f2fe">清洗与标准化</text>
+</g>
+<g>
+<rect x="400" y="330" width="220" height="100" rx="10" fill="#22c55e"/>
+<text x="510" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">意图与风险识别</text>
+<text x="510" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#dcfce7">判断意图与等级</text>
+</g>
+<g>
+<rect x="720" y="160" width="220" height="100" rx="10" fill="#f97316"/>
+<text x="830" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">回复生成</text>
+<text x="830" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffedd5">自动回复草稿</text>
+</g>
+<g>
+<rect x="720" y="320" width="220" height="100" rx="10" fill="#f97316"/>
+<text x="830" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">CRM工单生成</text>
+<text x="830" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffedd5">售后工单创建</text>
+</g>
+<g>
+<rect x="720" y="480" width="220" height="100" rx="10" fill="#f97316"/>
+<text x="830" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">飞书分级告警</text>
+<text x="830" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffedd5">分级告警推送</text>
+</g>
+<g>
+<rect x="1040" y="220" width="220" height="100" rx="10" fill="#a855f7"/>
+<text x="1150" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">人工审核</text>
+<text x="1150" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#f3e8ff">确认/驳回/修改</text>
+</g>
+<g>
+<rect x="1040" y="460" width="220" height="100" rx="10" fill="#a855f7"/>
+<text x="1150" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">数据回写与治理</text>
+<text x="1150" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#f3e8ff">沉淀评估样本</text>
+</g>
+<line x1="300" y1="380" x2="400" y2="380" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="350" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">标准化</text>
+<line x1="620" y1="360" x2="720" y2="210" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="670" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">允许回复</text>
+<line x1="620" y1="380" x2="720" y2="370" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="670" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">售后意图</text>
+<line x1="620" y1="400" x2="720" y2="530" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="670" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">严重VOC</text>
+<line x1="940" y1="210" x2="1040" y2="270" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="990" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">低置信</text>
+<line x1="940" y1="370" x2="1040" y2="270" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="990" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">审核草稿</text>
+<polyline points="940,530 980,530 980,270 1040,270" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="1000" y="400" text-anchor="start" font-family="Arial, sans-serif" font-size="13" fill="#475569">处理反馈</text>
+<line x1="1150" y1="320" x2="1150" y2="460" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="1165" y="395" text-anchor="start" font-family="Arial, sans-serif" font-size="13" fill="#475569">反馈标签</text>
+<polyline points="1040,510 1040,650 510,650 510,430" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#a)"/>
+<text x="775" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#64748b">样本回流</text>
+</svg></div></div><p class='hint'>支持滚轮缩放、鼠标拖拽平移。</p></section><section class='content-section level-1' id='background' data-title='背景与目标'><div class='section-kicker'><span class='step'>P.2</span> 背景</div><div class='section-head'><h2>背景与目标</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：此模块作为整个产品的业务基础，定义痛点与目标，后续所有功能均基于这些痛点展开</p><p class='section-summary'>品牌营销中心在私域社群中处理大量VOC咨询与售后问题，人工压力高，负面舆情易扩散，需要AI助手实现自动答疑、售后工单识别与生成、严重VOC分级告警，并确保高风险场景安全分流。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>核心痛点</h3><span class='mini-badge'>P0</span></div><p>群组消息量大导致重复答疑成本高，负面情绪未及时安抚易引发品牌风险，售后意图缺乏自动化识别，严重VOC缺少分级告警，以及多客服重复处理同一案件引发用户二次愤怒。</p><ul class='clean-list'><li>高频Q&amp;A问题反复人工回复</li><li>负面反馈响应不及时导致舆情升级</li><li>售后诉求依靠人工判断是否建工单</li><li>电池召回、品牌声誉等高风险场景无自动分流</li><li>仅靠关键词判断导致误报与误回复</li><li>多客服重复处理同一案件</li></ul></article><article class='info-card'><div class='card-title-row'><h3>目标</h3><span class='mini-badge'>P1</span></div><p>建立AI群组答疑助手，实现自动化答疑、售后工单生成、VOC严重等级识别与飞书告警、高风险安全分流及可审计的运营闭环。</p><ul class='clean-list'><li>基于Q&amp;A知识库和上下文自动回复或安抚</li><li>识别售后意图并自动创建CRM工单或引导用户</li><li>根据严重程度进行飞书分级告警</li><li>对电池召回、供应商低价、品牌声誉等场景AI不介入</li><li>沉淀回复记录、判断结果与人工接管数据</li></ul></article></div></div></section><section class='content-section level-1' id='success_metrics' data-title='成功指标'><div class='section-kicker'><span class='step'>P.3</span> 指标</div><div class='section-head'><h2>成功指标</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：在明确业务目标后定义可量化的成功指标，用于评估后续各个模块的效果</p><p class='section-summary'>定义意图识别准确率、售后工单判定准确率、工单生成成功率、严重告警漏报率、AI不应介入场景误回复率、运营审核通过率及平均告警延迟等关键度量标准。</p><div class='kv-grid'><div class='kv'><span>意图识别准确率</span><strong>&gt;90%</strong></div><div class='kv'><span>售后工单意图判定准确率</span><strong>&gt;90%</strong></div><div class='kv'><span>工单生成成功率</span><strong>&gt;99%</strong></div><div class='kv'><span>P0场景告警漏报率</span><strong>&lt;1%</strong></div><div class='kv'><span>AI不应介入场景误回复率</span><strong>&lt;1%</strong></div><div class='kv'><span>运营人工审核通过率</span><strong>&gt;85%</strong></div></div></div></section><section class='content-section level-1' id='user_roles' data-title='目标用户与角色'><div class='section-kicker'><span class='step'>P.4</span> 用户</div><div class='section-head'><h2>目标用户与角色</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：定义产品的目标用户及其核心诉求，为后续功能模块设计提供角色依据</p><p class='section-summary'>产品主要面向社媒运营、社群运营、客服售后团队、品牌营销管理者以及数据中台/AI团队，分别有风险识别、自动答疑、工单结构化、严重告警统计和服务稳定性的诉求。</p><div class='table-card'><h3>角色与核心诉求</h3><div class='table-wrap'><table><thead><tr><th>角色</th><th>描述</th><th>核心诉求</th></tr></thead><tbody><tr><td>社媒运营</td><td>负责群组互动、舆情处理、用户安抚</td><td>快速识别风险消息，减少重复答疑，避免错误回复</td></tr><tr><td>社群运营</td><td>负责私域社群日常维护</td><td>自动处理高频问题，提升互动效率</td></tr><tr><td>客服/售后团队</td><td>负责工单处理与售后跟进</td><td>获得结构化工单信息，减少重复沟通</td></tr><tr><td>品牌营销管理者</td><td>关注品牌声誉与大促期间反馈</td><td>获取严重VOC分级告警和趋势统计</td></tr><tr><td>数据中台/AI团队</td><td>负责数据、模型服务与Agent编排</td><td>提供稳定数据流、模型调用和动作执行能力</td></tr></tbody></table></div></div></div></section><section class='content-section level-1' id='core_pipeline' data-title='核心生成流水线'><div class='section-kicker'><span class='step'>P.5</span> 核心能力</div><div class='section-head'><h2>核心生成流水线</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：核心生成流水线为产品的主要功能模块，串联消息接入、意图识别、回复生成、工单处理和告警等环节，后续子模块按顺序展开</p><p class='section-summary'>以标准化VOC事件为起点，经意图识别与严重等级判断，根据场景执行自动化回复、CRM工单生成或飞书分级告警，并支持人工审核与反馈闭环，实现端到端社群答疑与风险管控。</p><details class='subsection' open><summary>F1：群组消息接入与VOC解析</summary><p>从VOC数据中台接入群组消息并完成去重、清洗、语言识别和上下文聚合，生成标准化VOCEvent对象，为后续判断提供基础。</p><ul class='clean-list'><li>数据输入：群组消息ID、群组信息、用户信息、消息正文、上下文、历史标签等</li><li>用户输入：监听群组范围配置、自动/半自动/只告警策略、大促期间高敏感策略</li><li>系统输出：标准化VOCEvent、语言识别结果、消息主题分类、情绪倾向、初步严重等级</li></ul></details><details class='subsection' open><summary>F2：用户意图识别与场景分类</summary><p>基于VOCEvent结合群组上下文、历史工单和知识库进行意图分类，输出置信度与是否需要自动回复、工单、告警及禁止AI介入的决策。</p><ul class='clean-list'><li>建议意图分类：售前咨询、售后咨询、工单跟进、负面反馈、品牌风险、价格敏感、法务极端表达、老板回复、正向互动</li><li>关键原则：不以关键词作为单一判断标准，结合上下文与个案描述，高风险场景优先告警而非自动回复，避免让用户重复描述诉求</li><li>运营可配置分类规则、高风险关键词组合规则，并人工标注反馈以优化模型</li></ul></details><details class='subsection' open><summary>F3：自动化回复生成</summary><p>根据用户消息、上下文、Q&amp;A知识库及品牌话术生成回复，支持多种发送模式（自动/审核后/仅推荐），并依据安全规则拦截不应回复的场景。</p><ul class='clean-list'><li>回复策略：正向互动自动感谢，高频售前基于知识库回答，一般售后安抚加引导工单，长期未处理工单提醒客服，AI两轮未解决转人工</li><li>安全拦截：电池召回、低价供应商、品牌声誉、B/C端价格问题、老板回复时AI不回复</li><li>负向安抚示例模板可配置，支持多语言与地区切换</li></ul></details><details class='subsection' open><summary>F4：售后工单意图识别与CRM工单生成</summary><p>识别用户售后诉求并生成CRM工单草稿，自动创建或引导用户补充信息，同时进行工单去重与案件合并，避免重复建单或多次询问。</p><ul class='clean-list'><li>工单创建原则：避免重复创建，长期不回复需提醒客服，同一案件多客服处理需合并，尽量减少补充字段由上下文提取</li><li>建议CRM工单字段：来源渠道、群组ID、消息ID、用户ID、联系方式、产品型号、订单号、问题类型、摘要、情绪、严重等级、分配团队、状态等</li></ul></details><details class='subsection' open><summary>F5：VOC严重等级识别与飞书分级告警</summary><p>对VOC事件进行严重等级评估，按S0～S4分级，并通过飞书进行实时告警，支持@负责人和创建待办，高风险事件AI不介入。</p><ul class='clean-list'><li>严重等级：S0最高风险（老板回复、电池召回等）立即告警，S1高风险（价格争议）不介入或内部建议，S2中风险（退款、工单未处理）安抚加告警，S3低风险可不告警，S4正向互动不告警</li><li>用户配置：告警规则、飞书群、接收人、SLA</li></ul></details><details class='subsection' open><summary>F6：人工审核与反馈闭环</summary><p>提供人工审核界面，支持确认/驳回/修改回复、调整意图标签和严重等级，沉淀审核结果用于规则优化和评估样本积累。</p><ul class='clean-list'><li>运营可标记误判并加入规则库或案例库</li><li>系统更新VOC数据中台标签和案例库，生成评估数据集，支持后续Playbook规则优化</li></ul></details></div></section><section class='content-section level-2' id='io_boundary' data-title='输入输出与动作边界'><div class='section-kicker'><span class='step'>P.5.1</span> 边界</div><div class='section-head'><h2>输入输出与动作边界</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：在定义各功能模块后，汇总系统的输入/输出与动作边界，厘清数据来源、用户配置和系统产出</p><p class='section-summary'>明确系统所需的数据输入（VOC数据中台、Q&amp;A知识库、CRM等）、用户可配置的输入项（群组策略、告警规则、话术等）、系统产生的各类输出（回复、判断、工单、告警）以及对应的动作类型。</p><div class='table-card'><h3>数据输入来源</h3><div class='table-wrap'><table><thead><tr><th>来源</th><th>数据内容</th><th>当前状态</th></tr></thead><tbody><tr><td>VOC数据中台</td><td>社群消息、用户VOC、历史标签、群组上下文</td><td>已有基础设施</td></tr><tr><td>Q&amp;A知识库</td><td>售前+售后问答、品牌标准回复</td><td>前置依赖暂缺</td></tr><tr><td>VOC严重程度分级表</td><td>严重等级、处理方式、示例</td><td>前置依赖暂缺</td></tr><tr><td>CRM系统</td><td>工单创建、工单查询、字段映射</td><td>权限与字段映射暂缺</td></tr><tr><td>飞书</td><td>告警群、通知、待办、审批、机器人消息</td><td>Feishu Adapter Service待开发</td></tr><tr><td>活动日历</td><td>615-715营销大促、到货紧张期等</td><td>需业务维护</td></tr></tbody></table></div></div><div class='table-card'><h3>用户输入配置</h3><div class='table-wrap'><table><thead><tr><th>用户</th><th>输入内容</th></tr></thead><tbody><tr><td>社媒运营</td><td>群组范围、自动回复策略、告警接收人、禁用场景</td></tr><tr><td>客服团队</td><td>工单字段要求、售后处理规则、人工接管规则</td></tr><tr><td>品牌团队</td><td>品牌话术、负面安抚模板、不可回复边界</td></tr><tr><td>管理者</td><td>严重等级标准、SLA要求、升级路径</td></tr></tbody></table></div></div><div class='table-card'><h3>系统输出类型</h3><div class='table-wrap'><table><thead><tr><th>输出类型</th><th>内容</th></tr></thead><tbody><tr><td>回复输出</td><td>群组回复文案、人工审核草稿</td></tr><tr><td>判断输出</td><td>意图分类、严重等级、置信度、是否需人工介入</td></tr><tr><td>工单输出</td><td>工单草稿、工单创建结果、CRM工单ID</td></tr><tr><td>告警输出</td><td>飞书告警卡片、处理建议、上下文摘要</td></tr><tr><td>运营输出</td><td>日报、周报、误判样本、热点问题统计</td></tr></tbody></table></div></div><div class='table-card'><h3>动作输出列表</h3><div class='table-wrap'><table><thead><tr><th>动作</th><th>说明</th></tr></thead><tbody><tr><td>自动回复</td><td>向群组发送回复，需根据群组策略控制</td></tr><tr><td>创建CRM工单</td><td>对符合条件的售后诉求创建工单</td></tr><tr><td>查询CRM工单</td><td>避免重复建单，识别长期未处理工单</td></tr><tr><td>发送飞书告警</td><td>对严重VOC分级告警</td></tr><tr><td>创建飞书待办</td><td>为社媒运营或客服创建处理任务</td></tr><tr><td>写回数据中台</td><td>保存判断、回复、告警、工单、人工反馈</td></tr><tr><td>人工接管</td><td>对高风险或低置信度场景转人工处理</td></tr></tbody></table></div></div></div></section><section class='content-section level-1' id='user_flow' data-title='用户流程'><div class='section-kicker'><span class='step'>P.6</span> 流程</div><div class='section-head'><h2>用户流程</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：以用户视角展示从社群消息进入到最终动作决策与结果回写的全流程，支撑后续架构与非功能需求</p><p class='section-summary'>社群消息经VOC数据中台接入后，标准化为VOCEvent，Agent依次进行意图识别、情绪分析、严重等级判断及AI介入决策，最后执行自动回复、工单创建或飞书告警，并将结果回写至数据中台以供审计与优化。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>流程步骤</h3><span class='mini-badge'>P0</span></div><p>从消息接收到最终执行与反馈的端到端用户流程。</p><ul class='clean-list'><li>社群消息进入VOC数据中台</li><li>系统接收/拉取新VOC消息，进行清洗、去重、语言识别与上下文聚合</li><li>生成标准化VOCEvent</li><li>Agent判断流程：意图识别、情绪识别、严重等级识别、是否允许AI介入、是否需要工单/告警/人工审核</li><li>动作决策：可自动回复则生成并发送或进入审核池；售后意图明确则生成工单草稿并创建工单；高风险VOC则不发回复仅飞书告警；低置信度或规则冲突转人工审核；正向互动生成互动回复</li><li>结果写回：回复记录、工单结果、飞书告警结果写回VOC数据中台，人工反馈进入评估与规则优化</li></ul></article></div></div></section><section class='content-section level-1' id='non_functional' data-title='非功能需求'><div class='section-kicker'><span class='step'>P.7</span> 非功能</div><div class='section-head'><h2>非功能需求</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：在业务流程确定后，定义实时性、准确性、可靠性、安全性、可审计性等非功能需求，作为架构和技术选型的约束</p><p class='section-summary'>覆盖实时性（S0/S1告警秒级到1分钟内）、准确性（意图识别与工单判定 &gt;90%）、可靠性（工单生成 &gt;99%且失败重试）、安全性（高风险不自动回复）、可审计性、可配置性、可扩展性、可观测性和合规性等维度。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>关键非功能要求</h3><span class='mini-badge'>P0</span></div><p>系统在实时性、准确性和安全维度上的核心承诺。</p><ul class='clean-list'><li>严重VOC告警SLA：S0/S1建议秒级到1分钟，S2可分钟级</li><li>意图识别准确率&gt;90%，售后工单意图判定准确率&gt;90%</li><li>工单生成成功率&gt;99%，失败需重试与告警</li><li>高风险、价格敏感、品牌声誉场景默认不自动回复</li><li>每次判断需记录输入、模型输出、规则命中、动作结果与人工反馈</li><li>群组策略、告警等级、回复模板、禁用场景支持配置化</li><li>支持后续多渠道、多语言、多CRM字段扩展</li><li>支持Trace、日志、指标与失败回放的可观测性</li><li>用户隐私与订单信息需脱敏存储和最小化使用</li></ul></article></div></div></section><section class='content-section level-1' id='pre_dependencies' data-title='前置依赖与当前缺口'><div class='section-kicker'><span class='step'>P.8</span> 依赖</div><div class='section-head'><h2>前置依赖与当前缺口</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：在明确产品需要后，列出现有缺口与前置依赖，作为里程碑和风险应对的基础</p><p class='section-summary'>目前Q&amp;A知识库、VOC严重程度分级表、私域群消息实时推送通道、CRM工单写入权限、字段映射、飞书告警通道、Feishu Adapter Service及大促期间策略等均为暂缺或待开发状态。</p><div class='table-card'><h3>依赖项状态</h3><div class='table-wrap'><table><thead><tr><th>依赖项</th><th>状态</th><th>说明</th></tr></thead><tbody><tr><td>Q&amp;A知识库（售前+售后）</td><td>暂缺</td><td>需整理标准问答、语言版本、适用场景</td></tr><tr><td>VOC严重程度分级+处理方式表</td><td>暂缺</td><td>需包含示例、等级、动作、是否允许AI回复</td></tr><tr><td>私域群消息实时推送通道</td><td>暂缺</td><td>不能只依赖轮询，需评估Webhook/消息订阅</td></tr><tr><td>CRM工单写入权限</td><td>暂缺</td><td>需开通API权限</td></tr><tr><td>CRM字段映射</td><td>暂缺</td><td>需明确必填字段、可选字段、去重逻辑</td></tr><tr><td>工单生成后售后处理SLA</td><td>暂缺</td><td>需定义工单创建后客服响应速度</td></tr><tr><td>飞书告警通道</td><td>待开发</td><td>依赖Feishu Adapter Service</td></tr><tr><td>Feishu Adapter Service</td><td>待开发</td><td>负责飞书消息、告警、待办、审批等动作</td></tr><tr><td>自动回复通道</td><td>待确认</td><td>需要明确群组平台是否支持机器人发言</td></tr><tr><td>大促期间策略</td><td>待业务确认</td><td>615-715大促和7月到货紧张期不宜高风险测试</td></tr></tbody></table></div></div></div></section><section class='content-section level-1' id='tech_architecture' data-title='技术选型与架构'><div class='section-kicker'><span class='step'>P.9</span> 技术</div><div class='section-head'><h2>技术选型与架构</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：在了解缺口后提出技术选型与总体架构，作为后续开发的基础</p><p class='section-summary'>建议采用Agent编排+RAG+规则引擎+动作Adapter的工程路线，通过LangGraph或轻量状态机实现决策分支，以LiteLLM网关统一模型调用，结合RAG知识库与配置化规则引擎，并通过CRM Adapter和Feishu Adapter Service隔离外部系统。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>总体架构组件</h3><span class='mini-badge'>P0</span></div><p>从VOC事件接入到最终动作执行的分层架构组件。</p><ul class='clean-list'><li>VOC Event Ingestion Service：消息接入、去重、清洗、上下文聚合</li><li>Community Q&amp;A Agent Service：意图识别、严重等级判断、回复生成、工单决策、告警决策</li><li>RAG Knowledge Service：包含Q&amp;A知识库、VOC分级规则、品牌话术库、历史案例库</li><li>LiteLLM Gateway：模型路由、成本控制、调用日志、多模型fallback</li><li>CRM Adapter：工单创建、查询、字段映射</li><li>Feishu Adapter Service：飞书告警、待办、审批、回写</li></ul></article><article class='info-card'><div class='card-title-row'><h3>决策策略：四层决策</h3><span class='mini-badge'>P0</span></div><p>推荐采用硬规则拦截 -&gt; LLM意图识别 -&gt; RAG回复生成 -&gt; 动作执行的四层策略，确保高风险场景由确定性规则兜底。</p><ul class='clean-list'><li>第一层硬规则：老板回复、电池召回、价格争议、品牌声誉等直接禁止自动回复</li><li>第二层LLM意图识别：判断咨询、投诉、售后、工单跟进、正向互动等意图</li><li>第三层RAG回复生成：仅在允许AI介入时从知识库和话术库检索生成回复</li><li>第四层动作执行：根据策略执行自动回复、工单创建、飞书告警或人工审核</li></ul></article></div><div class='table-card'><h3>组件选型建议</h3><div class='table-wrap'><table><thead><tr><th>模块</th><th>建议选型</th><th>原因</th></tr></thead><tbody><tr><td>Agent编排</td><td>LangGraph或轻量自研状态机</td><td>需要明确分支：自动回复、工单、告警、人工审核</td></tr><tr><td>LLM服务</td><td>定制化LiteLLM网关</td><td>统一模型调用、路由、日志、成本控制、fallback</td></tr><tr><td>知识库检索</td><td>RAG+向量库+结构化规则表</td><td>Q&amp;A适合检索，严重等级更适合规则和案例结合</td></tr><tr><td>规则引擎</td><td>配置化YAML/JSON+代码规则</td><td>高风险场景必须确定性拦截</td></tr><tr><td>数据来源</td><td>VOC数据中台</td><td>社群数据已在VOC数据中台</td></tr><tr><td>飞书集成</td><td>Feishu Adapter Service（待开发）</td><td>统一封装飞书消息、告警、待办、审批</td></tr><tr><td>CRM集成</td><td>CRM Adapter</td><td>隔离CRM字段、权限、重试和幂等逻辑</td></tr><tr><td>日志与观测</td><td>Langfuse/OpenTelemetry/自研Trace</td><td>记录Agent判断链路，支持误判复盘</td></tr><tr><td>评估体系</td><td>离线标注集+线上人工反馈</td><td>支撑准确率、误报率、漏报率持续评估</td></tr></tbody></table></div></div><details class='subsection' open><summary>Feishu Adapter Service职能</summary><p>该服务应统一封装飞书侧动作，包括告警卡片发送、@负责人、创建待办、处理状态回写、人工审核卡片、失败重试、API调用日志和权限Token管理，业务Agent只需输出标准动作JSON。</p><ul class='clean-list'><li>告警卡片发送与分级@负责人</li><li>创建待办与处理状态回写</li><li>人工审核卡片交互</li><li>飞书消息发送失败重试与日志记录</li><li>权限和token管理</li></ul></details></div></section><section class='content-section level-1' id='milestones' data-title='里程碑与交付节奏'><div class='section-kicker'><span class='step'>P.10</span> 里程碑</div><div class='section-head'><h2>里程碑与交付节奏</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：根据依赖缺口和技术方案规划分阶段交付的里程碑，明确每阶段目标和时间</p><p class='section-summary'>规划从需求澄清、615前一期MVP（意图识别与告警，默认人工审核）、大促灰度（仅低风险半自动）、CRM工单接入、自动回复灰度到评估与自优化的分期交付路径。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>M0：需求澄清</h3><span class='mini-badge'>立即启动</span></div><p>补齐Q&amp;A知识库、VOC分级表、CRM字段、飞书告警SLA及群消息实时通道方案。</p><ul class='clean-list'><li>确认并整理Q&amp;A知识库与话术库</li><li>输出VOC严重程度分级表与处理方式</li><li>明确CRM字段映射与去重逻辑</li><li>评估私域群消息实时推送方案</li><li>确认飞书告警通道与SLA</li></ul></article><article class='info-card'><div class='card-title-row'><h3>M1：615前一期MVP</h3><span class='mini-badge'>615前</span></div><p>实现VOC接入、意图识别、严重等级判断、飞书告警和回复草稿生成，默认采用人工审核模式，不自动发送群消息。</p><ul class='clean-list'><li>VOC消息接入与标准化</li><li>Agent意图识别与严重等级判断</li><li>飞书分级告警</li><li>低风险回复草稿生成</li><li>所有判断结果写回数据中台</li></ul></article><article class='info-card'><div class='card-title-row'><h3>M2：大促期间灰度</h3><span class='mini-badge'>615-715</span></div><p>在615-715大促期间仅对低风险场景启用半自动回复，高风险场景仅告警不自动处理，避免误回复风险。</p><ul class='clean-list'><li>只对S3/S4低风险场景启用半自动回复</li><li>S0-S2高风险仅告警+人工审核</li><li>7月到货紧张期加强硬规则拦截</li></ul></article><article class='info-card'><div class='card-title-row'><h3>M3：CRM工单接入</h3><span class='mini-badge'>715后</span></div><p>接入CRM工单创建/查询/去重和字段映射，支持售后工单自动生成，并完善案件合并逻辑。</p><ul class='clean-list'><li>CRM API权限与字段映射就绪</li><li>工单草稿自动创建与审核</li><li>工单去重与案件合并</li><li>长期未处理工单提醒客服</li></ul></article><article class='info-card'><div class='card-title-row'><h3>M4：自动回复灰度</h3><span class='mini-badge'>TBD</span></div><p>在指定低风险群组启用自动回复，保留人工兜底和回滚机制，根据运营反馈逐步扩大范围。</p><ul class='clean-list'><li>配置低风险群组自动回复策略</li><li>实时监控回复准确率与投诉</li><li>快速回滚和人工接管通道</li></ul></article><article class='info-card'><div class='card-title-row'><h3>M5：评估与自优化</h3><span class='mini-badge'>TBD</span></div><p>建立误判样本集、回复通过率评估、规则迭代和案例库沉淀，持续优化模型与规则。</p><ul class='clean-list'><li>搭建离线评估与在线标注流程</li><li>定期生成误判样本报告</li><li>基于反馈优化意图分类、严重等级和回复质量</li><li>案例库与规则库持续迭代</li></ul></article></div></div></section><section class='content-section level-1' id='risks' data-title='风险与应对'><div class='section-kicker'><span class='step'>P.11</span> 风险</div><div class='section-head'><h2>风险与应对</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：在明确交付路径后，识别主要风险并给出应对措施，作为项目管理的闭环</p><p class='section-summary'>识别误回复高风险问题、工单重复创建、用户重复描述诉求、告警过多导致疲劳、仅靠关键词误判、实时通道不稳定、CRM权限不完整等风险，并分别制定缓解策略。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>主要风险列表</h3><span class='mini-badge'>P0</span></div><p>在高风险业务场景中需要重点关注的问题及应对。</p><ul class='clean-list'><li>误回复高风险问题：通过硬规则拦截+人工审核，确保品牌声誉相关场景AI不自动回复</li><li>工单重复创建：借助CRM查询+去重键，避免同一问题多次建单</li><li>用户重复描述诉求：利用上下文抽取现有信息，只向用户请求最小补充字段</li><li>告警过多造成疲劳：采用分级告警+聚合摘要，大促期间按严重等级过滤</li><li>仅靠关键词误判：结合关键词+上下文+个案描述进行综合判断</li><li>实时通道不稳定：优先评估事件推送/Webhook方案，不依赖低频轮询</li><li>CRM权限不完整：M1先做工单草稿，M3再正式接入CRM</li></ul></article></div></div></section><section class='content-section level-1' id='scope_out' data-title='暂不包含的功能'><div class='section-kicker'><span class='step'>P.12</span> 范围外</div><div class='section-head'><h2>暂不包含的功能</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：明确本期不包含的功能范围，避免边界蔓延</p><p class='section-summary'>本期聚焦于私域群组的答疑、安抚、工单和告警，不涉及复杂售后完整替代、高风险自动介入、未授权CRM读写、全量公开舆情监控、多轮销售转化Agent及模型微调。</p><div class='card-grid'><article class='info-card'><div class='card-title-row'><h3>Out of Scope</h3><span class='mini-badge'>P1</span></div><p>明确不做的功能，防止需求膨胀。</p><ul class='clean-list'><li>不直接替代客服完整处理复杂售后</li><li>不自动介入电池召回、品牌声誉、供应商低价、B/C端价格争议等高风险问题</li><li>不在未授权情况下读取或写入CRM敏感数据</li><li>不做公开社媒平台的全量舆情监控，本期聚焦私域群组/社群消息</li><li>不做复杂多轮销售转化Agent，本期以答疑、安抚、工单、告警为主</li><li>不做模型微调，优先采用RAG+规则+LLM网关调用</li></ul></article></div></div></section><section class='extension-intro' id='extension-supplement'><div class='section-kicker'><span class='step'>EXT</span> Supplement</div><h2>补充拓展信息</h2><p>以下内容根据你勾选的拓展项生成，作为 PRD 原文之后的补充段落，不覆盖原始需求。</p></section><section class='content-section extension-zone level-1' id='extension-tech-selection' data-title='技术选型建议'><div class='section-kicker'><span class='step'>E.E.1</span> 补充拓展</div><div class='section-head'><h2>技术选型建议</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：基于原 PRD 技术选型与架构模块，补充更详细的组件选型建议、适用原因和注意事项，并强调消息接入、VOC 清洗、意图识别、RAG 知识库、回复生成、人工审核、CRM 工单、飞书告警、日志审计、权限与安全等关键环节的技术考量。</p><p class='section-summary'>针对社群群组答疑助手场景，围绕消息接入、VOC 清洗、意图识别、RAG 知识库、回复生成、人工审核、CRM 工单、飞书告警、日志审计与权限安全等环节，给出推荐技术方案、适用原因及注意事项，确保系统在高风险场景下的确定性兜底、可观测性和可扩展性。</p><div class='table-card'><h3>组件选型建议</h3><div class='table-wrap'><table><thead><tr><th>模块</th><th>推荐方案</th><th>适用原因</th><th>注意事项</th></tr></thead><tbody><tr><td>Agent 编排</td><td>LangGraph 或轻量自研状态机</td><td>需要明确分支：自动回复、工单、告警、人工审核，支持条件跳转和人工介入节点</td><td>避免过度复杂的 DAG，初期可用状态机；需记录每个决策节点输入输出用于审计</td></tr><tr><td>LLM 服务</td><td>定制化 LiteLLM 网关</td><td>统一模型调用、路由、成本控制、多模型 fallback，避免供应商锁定</td><td>需配置速率限制和重试策略；敏感数据脱敏后再发送至 LLM</td></tr><tr><td>RAG 知识库</td><td>向量库（如 Milvus/Qdrant）+ 结构化规则表</td><td>Q&amp;A 适合向量检索，严重等级和禁止回复场景更适合规则表精确匹配</td><td>需定期更新知识库，结合人工反馈剔除低质量内容；检索结果需附带来源和置信度</td></tr><tr><td>消息队列/异步任务</td><td>Kafka/Redis Stream + Celery/自研 Worker</td><td>群组消息高峰时削峰填谷，解耦接入与处理，支持重试和死信队列</td><td>需定义消息持久化和消费幂等；告警类消息优先级高于普通回复</td></tr><tr><td>CRM Adapter</td><td>独立微服务，封装 CRM API</td><td>隔离 CRM 字段映射、权限、重试和幂等逻辑，避免主流程因 CRM 不可用而阻塞</td><td>工单创建需支持幂等键（如消息 ID+用户 ID）；失败时写入延迟队列重试</td></tr><tr><td>飞书 Adapter</td><td>Feishu Adapter Service（待开发）</td><td>统一封装飞书消息、告警卡片、待办、审批，业务 Agent 只需输出标准动作 JSON</td><td>需管理 tenant token 和刷新逻辑；告警发送失败需降级为内部通知</td></tr><tr><td>日志审计与监控</td><td>Langfuse/OpenTelemetry + 自研 Trace</td><td>记录 Agent 判断链路、模型调用、规则命中、动作结果，支持误判复盘和合规审计</td><td>日志需包含 trace_id、消息 ID、决策路径；敏感字段脱敏；设置保留周期</td></tr><tr><td>权限与安全</td><td>RBAC + API 网关 + 数据脱敏</td><td>不同角色（运营、客服、管理员）对群组策略、告警规则、工单查看有不同权限</td><td>用户隐私和订单信息最小化使用；禁止 AI 直接访问未脱敏 CRM 数据；定期权限审计</td></tr></tbody></table></div></div><details class='subsection' open><summary>消息接入与异步任务设计</summary><p>社群消息通过 VOC 数据中台实时推送（Webhook 或消息队列）进入系统，经去重、清洗后生成标准化 VOCEvent，再分发至 Agent 处理。异步任务需保证消息不丢失、不重复消费。</p><ul class='clean-list'><li>建议采用 Kafka 或云原生消息队列，按群组 ID 分区保证顺序</li><li>消费者需实现幂等：基于消息 ID 去重，已处理消息直接跳过</li><li>高风险场景（S0/S1）消息优先级最高，独立队列避免被普通消息阻塞</li><li>失败消息进入死信队列，支持人工重放或自动重试（指数退避）</li><li>监控消息积压和消费延迟，设置告警阈值</li></ul></details><details class='subsection' open><summary>权限与安全设计要点</summary><p>系统涉及社群消息、用户订单、CRM 工单等敏感数据，需从网络隔离、数据脱敏、访问控制和审计日志四个层面保障安全。</p><ul class='clean-list'><li>网络隔离：Agent 服务仅通过内部 API 与 Adapter 通信，不直接暴露公网</li><li>数据脱敏：发送给 LLM 的文本需移除手机号、订单号等 PII；日志中同样脱敏</li><li>访问控制：运营人员只能查看所负责群组的回复草稿和告警；客服只能查看相关工单</li><li>审计日志：所有人工审核操作（确认/驳回/修改）记录操作人和时间，不可篡改</li><li>定期演练：模拟高风险消息误回复场景，验证硬规则拦截和人工接管流程</li></ul></details></div></section><section class='content-section extension-zone level-1' id='extension-arch-optimization' data-title='架构与数据流优化'><div class='section-kicker'><span class='step'>E.E.2</span> 补充拓展</div><div class='section-head'><h2>架构与数据流优化</h2><button class='section-toggle' type='button'>收起</button></div><div class='section-body'><p class='logic-note'>前后逻辑：基于原 PRD 核心生成流水线，补充分层架构设计，明确各层输入、输出、失败兜底策略及与 PRD 功能模块的映射关系，提升数据流清晰度和系统健壮性。</p><p class='section-summary'>将系统拆分为输入层、理解层、决策层、动作层、人工审核层和数据回写层，每层定义清晰的输入输出、失败兜底机制，并与 PRD 中的 F1-F6 功能模块对应，确保端到端数据流可追溯、可降级、可恢复。</p><div class='table-card'><h3>分层架构设计</h3><div class='table-wrap'><table><thead><tr><th>层级</th><th>输入</th><th>输出</th><th>失败兜底</th><th>对应 PRD 模块</th></tr></thead><tbody><tr><td>输入层</td><td>社群原始消息（来自 VOC 数据中台）</td><td>标准化 VOCEvent（含去重、清洗、上下文聚合）</td><td>消息丢失时依赖数据中台重推；解析失败则丢弃并告警</td><td>F1：群组消息接入与 VOC 解析</td></tr><tr><td>理解层</td><td>VOCEvent</td><td>意图分类、情绪标签、严重等级、是否允许 AI 介入</td><td>LLM 调用失败降级为规则引擎判断；置信度低时标记需人工审核</td><td>F2：用户意图识别与场景分类</td></tr><tr><td>决策层</td><td>理解层输出 + 群组策略 + 用户历史</td><td>动作指令：自动回复/工单创建/告警/人工审核/禁止介入</td><td>规则冲突时优先安全侧（禁止回复）；决策超时则转人工</td><td>F3/F4/F5 的决策部分</td></tr><tr><td>动作层</td><td>动作指令 + 回复草稿/工单草稿/告警内容</td><td>执行结果：群消息发送、CRM 工单 ID、飞书告警 ID</td><td>发送失败重试（最多 3 次）；工单创建失败写入延迟队列；告警失败降级为内部通知</td><td>F3 回复发送、F4 工单创建、F5 告警发送</td></tr><tr><td>人工审核层</td><td>低置信度决策、高风险草稿、运营主动查询</td><td>审核结果：确认/驳回/修改，并回写标签</td><td>审核超时自动按保守策略执行（如不发送回复）；审核界面不可用时告警</td><td>F6：人工审核与反馈闭环</td></tr><tr><td>数据回写层</td><td>所有层的输出和人工反馈</td><td>更新 VOC 数据中台标签、案例库、评估数据集</td><td>回写失败记录本地日志，定时补偿同步；关键结果（告警、工单）优先回写</td><td>F6 数据沉淀、评估样本积累</td></tr></tbody></table></div></div><details class='subsection' open><summary>数据流关键路径与降级策略</summary><p>定义从消息进入到最终动作的主路径和异常降级路径，确保系统在部分组件不可用时仍能安全运行。</p><ul class='clean-list'><li>主路径：消息接入 → VOCEvent 生成 → 意图/严重等级判断 → 决策 → 动作执行 → 结果回写</li><li>LLM 不可用降级：理解层切换为纯规则引擎（基于关键词+上下文模板），仅输出高置信度结果，其余转人工</li><li>CRM 不可用降级：工单草稿暂存本地，待 CRM 恢复后批量创建，期间客服通过飞书待办手动处理</li><li>飞书不可用降级：告警通过备用通道（邮件/短信）发送给核心负责人，同时记录本地日志</li><li>数据中台回写失败：关键动作结果（告警、工单）写入本地持久化队列，定时重试，最长保留 7 天</li></ul></details><details class='subsection' open><summary>与 PRD 功能模块的映射细节</summary><p>将分层架构的每一层与 PRD 中 F1-F6 功能模块精确对应，并说明数据流转和依赖关系。</p><ul class='clean-list'><li>输入层对应 F1：接收 VOC 数据中台推送，完成清洗和标准化，输出 VOCEvent 供后续使用</li><li>理解层对应 F2：消费 VOCEvent，调用 LLM 或规则引擎，输出意图、情绪、严重等级和 AI 介入标志</li><li>决策层横跨 F3/F4/F5：根据理解层输出和群组策略，决定是否生成回复、创建工单或发送告警</li><li>动作层执行 F3 回复发送、F4 工单创建、F5 告警发送，通过 Adapter 隔离外部系统</li><li>人工审核层对应 F6 的前半部分：提供审核界面，处理低置信度和高风险草稿</li><li>数据回写层对应 F6 的后半部分：将审核结果、动作结果写回数据中台，沉淀评估样本和案例库</li></ul></details></div></section><p class='note'>本页面由 Dify Workflow 生成；点击“下载 HTML”即可保存为本地页面。</p></main></div><div class='toast'></div><script>(function(){const qs=(x,r=document)=>r.querySelector(x),qsa=(x,r=document)=>Array.from(r.querySelectorAll(x));const sections=qsa('.content-section'),navLinks=qsa('.nav a'),toastEl=qs('.toast');function toast(m){if(!toastEl)return;toastEl.textContent=m;toastEl.classList.add('show');setTimeout(()=>toastEl.classList.remove('show'),1500)}
+
+let searchHits=[],searchIndex=-1;
+const search=qs('#docSearch'),counter=qs('#searchCounter'),prevBtn=qs('#prevSearch'),nextBtn=qs('#nextSearch');
+
+function clearHighlights(){
+  qsa('mark.prd-search-hit').forEach(mark=>{
+    const parent=mark.parentNode;
+    if(!parent)return;
+    parent.replaceChild(document.createTextNode(mark.textContent),mark);
+    parent.normalize();
+  });
+  searchHits=[];
+  searchIndex=-1;
+  updateCounter();
+}
+
+function updateCounter(){
+  if(!counter)return;
+  counter.textContent=searchHits.length?(searchIndex+1)+'/'+searchHits.length:'0/0';
+}
+
+function highlightTextNode(node,q){
+  const text=node.nodeValue||'';
+  const lower=text.toLowerCase();
+  const needle=q.toLowerCase();
+  let pos=0;
+  let found=false;
+  const frag=document.createDocumentFragment();
+  while(true){
+    const idx=lower.indexOf(needle,pos);
+    if(idx<0)break;
+    found=true;
+    if(idx>pos)frag.appendChild(document.createTextNode(text.slice(pos,idx)));
+    const mark=document.createElement('mark');
+    mark.className='prd-search-hit';
+    mark.textContent=text.slice(idx,idx+q.length);
+    frag.appendChild(mark);
+    pos=idx+q.length;
+  }
+  if(!found)return;
+  if(pos<text.length)frag.appendChild(document.createTextNode(text.slice(pos)));
+  node.parentNode.replaceChild(frag,node);
+}
+
+function highlightTerm(q){
+  clearHighlights();
+  q=(q||'').trim();
+  if(!q)return;
+  const root=qs('.main');
+  if(!root)return;
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{
+    acceptNode(node){
+      const p=node.parentElement;
+      if(!p)return NodeFilter.FILTER_REJECT;
+      if(['SCRIPT','STYLE','SVG','TEXTAREA','INPUT','BUTTON','MARK'].includes(p.tagName))return NodeFilter.FILTER_REJECT;
+      if(!node.nodeValue||!node.nodeValue.toLowerCase().includes(q.toLowerCase()))return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const nodes=[];
+  while(walker.nextNode())nodes.push(walker.currentNode);
+  nodes.forEach(node=>highlightTextNode(node,q));
+  searchHits=qsa('mark.prd-search-hit');
+  searchIndex=searchHits.length?0:-1;
+  focusHit(0,false);
+}
+
+function focusHit(delta,relative=true){
+  if(!searchHits.length){updateCounter();return;}
+  searchHits.forEach(x=>x.classList.remove('active'));
+  if(relative)searchIndex=(searchIndex+delta+searchHits.length)%searchHits.length;
+  else searchIndex=Math.max(0,Math.min(searchHits.length-1,delta));
+  const hit=searchHits[searchIndex];
+  hit.classList.add('active');
+  hit.scrollIntoView({behavior:'smooth',block:'center'});
+  updateCounter();
+}
+
+let searchTimer=null;
+if(search)search.addEventListener('input',()=>{
+  clearTimeout(searchTimer);
+  searchTimer=setTimeout(()=>highlightTerm(search.value),120);
+});
+prevBtn?.addEventListener('click',()=>focusHit(-1,true));
+nextBtn?.addEventListener('click',()=>focusHit(1,true));
+
+function allCollapsed(){
+  return sections.length&&sections.every(sec=>sec.classList.contains('collapsed'));
+}
+
+function updateToggleLabel(){
+  const b=qs('#toggleAll');
+  if(b)b.textContent=allCollapsed()?'全部展开':'全部折叠';
+}
+
+qs('#toggleAll')?.addEventListener('click',()=>{
+  const collapse=!allCollapsed();
+  sections.forEach(sec=>sec.classList.toggle('collapsed',collapse));
+  qsa('.section-toggle').forEach(b=>b.textContent=collapse?'展开':'收起');
+  qsa('details').forEach(d=>d.open=!collapse);
+  updateToggleLabel();
+  toast(collapse?'已全部折叠':'已全部展开');
+});
+
+qsa('.section-toggle').forEach(btn=>btn.addEventListener('click',()=>{
+  const sec=btn.closest('.content-section');
+  if(!sec)return;
+  sec.classList.toggle('collapsed');
+  btn.textContent=sec.classList.contains('collapsed')?'展开':'收起';
+  updateToggleLabel();
+}));
+updateToggleLabel();
+qsa('.visual-section').forEach(section=>{let scale=1,tx=0,ty=0,drag=false,sx=0,sy=0;const viewer=qs('.svg-viewer',section),canvas=qs('.svg-canvas',section);if(!viewer||!canvas)return;const apply=()=>canvas.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;const zoom=d=>{scale=Math.max(.25,Math.min(4,scale+d));apply()};viewer.addEventListener('wheel',e=>{e.preventDefault();zoom(e.deltaY<0?.12:-.12)},{passive:false});viewer.addEventListener('pointerdown',e=>{drag=true;sx=e.clientX-tx;sy=e.clientY-ty;viewer.setPointerCapture(e.pointerId)});viewer.addEventListener('pointermove',e=>{if(!drag)return;tx=e.clientX-sx;ty=e.clientY-sy;apply()});viewer.addEventListener('pointerup',()=>drag=false);qs('[data-zoom="in"]',section)?.addEventListener('click',()=>zoom(.18));qs('[data-zoom="out"]',section)?.addEventListener('click',()=>zoom(-.18));qs('[data-zoom="reset"]',section)?.addEventListener('click',()=>{scale=1;tx=0;ty=0;apply()});apply();});function download(name,mime,content){const blob=new Blob([content],{type:mime});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}qs('#downloadHtml')?.addEventListener('click',()=>download('prd-richtext.html','text/html;charset=utf-8',document.documentElement.outerHTML));qs('#printBtn')?.addEventListener('click',()=>window.print());})();</script></body></html>
